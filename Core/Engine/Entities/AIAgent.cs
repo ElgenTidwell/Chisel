@@ -78,7 +78,7 @@ namespace Engine.Entities
         /// <summary>
         /// In units, how close this agent has to be to the target point (projected onto the floor) for <see cref="pathCompleted"/> to be marked true
         /// </summary>
-        protected float pathCompleteThreshold = 0.5f;
+        protected float pathCompleteThreshold = 1f;
 
         // Only repath when the target has moved more than ~0.5 units from the last search.
         private const float RepathThresholdSq = 0.25f;
@@ -281,15 +281,6 @@ namespace Engine.Entities
                 }
 
                 Vector3 checkPoint = floorWaypoint;
-                if (skip == waypoints.Count - 1)
-                {
-                    Vector3 towardSelf = projectedPos - floorWaypoint;
-                    if (towardSelf.LengthSquared() > 0.0001f)
-                    {
-                        towardSelf.Normalize();
-                        checkPoint = floorWaypoint + towardSelf * pathCompleteThreshold * 0.5f;
-                    }
-                }
 
                 if (!IsSweepClear(entity, checkPoint, expansionFactor: 1.25f))
                 {

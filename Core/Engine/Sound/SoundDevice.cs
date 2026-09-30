@@ -819,7 +819,7 @@ public unsafe class SoundDevice : IDisposable
     /// <param name="category">Which category does the sound belong to?</param>
     /// <returns>ID of the sound</returns>
     [Obsolete("in most cases, you should instead be using Soundscripts to play audio, rather than playing files directly.")]
-    public uint PlaySound(string filePath, Vector3 position, bool loop = false, float gain = 1f, float pitch = 1f, bool disable3D = false, float minDist = 1f, float maxDist = 64, float rolloff = 1f, SoundCategory category = SoundCategory.SFX)
+    public uint PlaySound(string filePath, Vector3 position, bool loop = false, float gain = 1f, float pitch = 1f, bool disable3D = false, float minDist = 5f, float maxDist = 80f, float rolloff = 1f, SoundCategory category = SoundCategory.SFX)
     {
         uint bufferID = PrefetchSound(filePath, !disable3D);
         return PlaySound(bufferID, position, loop, gain, pitch, disable3D, minDist, maxDist, rolloff, category);

@@ -23,6 +23,30 @@
 	</Design.DataContext>
 
 	<UserControl.Styles>
+		<Style Selector="CheckBox.vis-check">
+			<Setter Property="Width" Value="11"/>
+			<Setter Property="Height" Value="11"/>
+			<Setter Property="MinWidth" Value="0"/>
+			<Setter Property="MinHeight" Value="0"/>
+			<Setter Property="Padding" Value="0"/>
+			<Setter Property="Margin" Value="0,0,4,0"/>
+			<Setter Property="VerticalAlignment" Value="Center"/>
+			<Setter Property="Template">
+				<ControlTemplate>
+					<Border Background="White" BorderBrush="#808080" BorderThickness="1">
+						<Path Name="PART_Check"
+							  Data="M 0,4 L 3,7 L 8,0"
+							  Stroke="Black" StrokeThickness="1.5"
+							  Stretch="Uniform" Margin="1"
+							  IsVisible="False"/>
+					</Border>
+				</ControlTemplate>
+			</Setter>
+		</Style>
+		<Style Selector="CheckBox.vis-check:checked /template/ Path#PART_Check">
+			<Setter Property="IsVisible" Value="True"/>
+		</Style>
+
 		<Style Selector="Button.icon-btn">
 			<Setter Property="Width" Value="40"/>
 			<Setter Property="Height" Value="40"/>
@@ -169,6 +193,12 @@
 									<TextBlock Text="Visgroups" Margin="0,65,0,0"
 											   FontSize="10" FontWeight="SemiBold"
 											   Padding="4,2"/>
+									<WrapPanel>
+										<Button Content="New" FontSize="10" Padding="4,1" Click="VisNew_Click"/>
+										<Button Content="Del" FontSize="10" Padding="4,1" Click="VisDelete_Click"/>
+										<Button Content="+Sel" FontSize="10" Padding="4,1" Click="VisAddSel_Click"/>
+										<Button Content="-Sel" FontSize="10" Padding="4,1" Click="VisRemoveSel_Click"/>
+									</WrapPanel>
 									<TabControl>
 										<TabItem Header="User">
 											<ScrollViewer Height="160" Background="#0F0F0F">

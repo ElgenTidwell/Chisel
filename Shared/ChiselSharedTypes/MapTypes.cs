@@ -163,6 +163,15 @@ namespace Rockwall
         //public string GroupName;
         public Guid[] GroupMembers;
     }
+    [System.Serializable]
+    public class UserVisGroup
+    {
+        public Guid ID = Guid.NewGuid();
+        public string Name = "Group";
+        public Guid? ParentID;
+        public bool Visible = true;
+        public List<Guid> Members = new();
+    }
     public struct RawMap
     {
         public Brush[] Brushes;
@@ -170,6 +179,7 @@ namespace Rockwall
         public EntityReference[] EntityReferences;
         public Terrain[] Terrains;
         public EditorGroup[] Groups;
+        public List<UserVisGroup> VisGroups;
         /// <summary>
         /// Map-format version. 0 (the default for any JSON saved before this field existed) means
         /// "may still have brush-owned-entity data embedded per-brush".

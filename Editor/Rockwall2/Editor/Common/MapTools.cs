@@ -5,6 +5,7 @@ using Newtonsoft.Json;
 using Rockwall;
 using Rockwall2.Editor.Common.Input;
 using Rockwall2.Editor.Mapper;
+using Rockwall2.Editor.Mapper.Utils;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -77,6 +78,8 @@ public static class MapTools
             if (!Hints[i].GroupingID.HasValue) Hints[i].GroupingID = Guid.NewGuid();
             GuidMapper[Hints[i].GroupingID!.Value] = (i, ObjType.Hint);
         }
+
+        VisGroupManager.MarkDirty();
     }
     public static void BreakParentGroup(Guid guid)
     {
@@ -159,6 +162,7 @@ public static class MapTools
         {
             BrushOperations.UpdateTerrain(ref Terrains[i]);
         }
+        VisGroupManager.MarkDirty();
     }
     public static void RemoveBrush(Brush b)
     {
@@ -299,6 +303,7 @@ public static class MapTools
 
         lst.Add(e);
         ActiveMap.EntityReferences = lst.ToArray();
+        VisGroupManager.MarkDirty();
     }
     public static void RemoveEntity(EntityReference e)
     {
@@ -323,6 +328,7 @@ public static class MapTools
 
         lst.Add(t);
         ActiveMap.Terrains = lst.ToArray();
+        VisGroupManager.MarkDirty();
     }
     public static void RemoveTerrain(Terrain t)
     {
@@ -347,6 +353,7 @@ public static class MapTools
 
         lst.Add(h);
         ActiveMap.Hints = lst.ToArray();
+        VisGroupManager.MarkDirty();
     }
     public static void RemoveHint(Hint h)
     {
@@ -388,6 +395,7 @@ public static class MapTools
         ActiveMap.Terrains ??= new Terrain[0];
         ActiveMap.Hints ??= new Hint[0];
         ActiveMap.Groups ??= new EditorGroup[0];
+        ActiveMap.VisGroups ??= new List<UserVisGroup>();
 
         BrushBounds = new BoundingBox[Brushes.Length];
         MapLoaded = true;
@@ -463,6 +471,7 @@ public static class MapTools
         }
 
         SyncBrushOwnership();
+        VisGroupManager.OnMapReplaced();
     }
     public static void NewMap()
     {
@@ -479,11 +488,15 @@ public static class MapTools
         ActiveMap.Groups = new EditorGroup[0];
         ActiveMap.FormatVersion = Chisel.Formatter.MapMigration.CurrentFormatVersion;
         BrushBounds = new BoundingBox[0];
+        ActiveMap.VisGroups = new List<UserVisGroup>();
+        VisGroupManager.OnMapReplaced();
+
         MapLoaded = true;
         ActivePath = ""; // Literally just lost an awesome map because i didnt do this... damnit
     }
     public static void SaveMap()
     {
+        VisGroupManager.PruneStale();
         SaveMap(ActivePath);
     }
     public static void BuildMap(bool run)
@@ -610,6 +623,7 @@ public static class MapTools
             if (Brushes[i].IsLightNodeVolume && skipLightNodeVolumes) continue;
             if (!(BrushBounds[i].Intersects(ray) > 0)) continue;
             if (Brushes[i].isUsedForTerrain && skipTerrainSource) continue;
+            if (VisGroupManager.IsBrushHidden(i)) continue;
 
             if (ignoreBrush != null && ignoreBrush.Contains(i)) continue;
 
@@ -665,6 +679,7 @@ public static class MapTools
         {
             var ent = Entities[i];
             if (ent.IsBrushEntity) continue; // picked via its brushes (RaycastMapGeometry) instead
+            if (VisGroupManager.IsEntityHidden(ent)) continue;
 
             var box = MapperView.BoundsFor(ent.EntityName);
             box.Min += ent.Position;
@@ -687,6 +702,8 @@ public static class MapTools
         int hint = -1;
         for (int i = 0; i < Hints.Length; i++)
         {
+            if (VisGroupManager.IsHintHidden(i)) continue;
+
             var pos = Hints[i].Position;
             var box = new BoundingBox(pos - Vector3.One * 0.25f, pos + Vector3.One * 0.25f);
 
@@ -706,6 +723,7 @@ public static class MapTools
         int terrain = -1;
         for (int i = 0; i < Terrains.Length; i++)
         {
+            if (VisGroupManager.IsTerrainHidden(i)) continue;
             if (!(Terrains[i].Bounds.Intersects(ray) > 0)) continue;
 
             for (int j = 0; j < Terrains[i].Triangles.Length; j += 3)

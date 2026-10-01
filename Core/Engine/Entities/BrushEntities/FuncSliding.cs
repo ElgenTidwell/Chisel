@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 namespace Engine.Entities.BrushEntities;
 [EntityDescriptor()]
 [ExposeEntityProperty("Enable Use", EntityPropertyType.Bool, "Determines if this sliding entity can be activated by the 'Use' input. (eg. players)", defaultValue = "0")]
-[ExposeEntityProperty("Move Direction", EntityPropertyType.Direction, "The direction this moves when interacted (0,1,0 is down, along the Y axis).", defaultValue="0,1,0")]
+[ExposeEntityProperty("Move Direction", EntityPropertyType.Direction, "The direction this moves when interacted (0,1,0 is up, along the Y axis).", defaultValue="0,1,0")]
 [ExposeEntityProperty("Move Amount", EntityPropertyType.Float, "How far to move along the direction.", defaultValue = "0")]
 [ExposeEntityProperty("Move Speed", EntityPropertyType.Float, "How fast to move along the direction.", defaultValue = "0")]
 [ExposeEntityProperty("Wait Time", EntityPropertyType.Float, "How long to wait before returning to the start position. -1 means stay indefinitely.", defaultValue = "-1")]
@@ -62,7 +62,7 @@ public class FuncSlidingController : EntityController
     public override void OnSpawn()
     {
         startPosition = entity.Position;
-        direction = (Vector3)entity.ReadProperty("Move Direction", EntityPropertyType.Direction);
+        direction = Vector3.Normalize((Vector3)entity.ReadProperty("Move Direction", EntityPropertyType.Direction));
         moveSpeed = (float)entity.ReadProperty("Move Speed", EntityPropertyType.Float);
         moveAmount = (float)entity.ReadProperty("Move Amount", EntityPropertyType.Float);
         maxWaitTime = (float)entity.ReadProperty("Wait Time", EntityPropertyType.Float);

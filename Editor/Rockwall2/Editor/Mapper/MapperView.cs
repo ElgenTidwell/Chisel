@@ -758,6 +758,8 @@ public class MapperView : IEditorScene
 
         for (int bi = 0; bi < MapTools.Brushes.Length; bi++)
         {
+            if (VisGroupManager.IsBrushHidden(bi)) continue;
+
             var brush = MapTools.Brushes[bi];
             if (brush.Vertices == null) continue;
 
@@ -809,6 +811,7 @@ public class MapperView : IEditorScene
         {
             var ent = MapTools.Entities[i];
             if (ent.IsBrushEntity) continue;
+            if (VisGroupManager.IsEntityHidden(ent)) continue;
 
             var box = BoundsFor(ent.EntityName);
 
@@ -1074,6 +1077,8 @@ public class MapperView : IEditorScene
             var target = MapTools.Entities.FirstOrDefault(o => o.Name == targetName && !o.IsBrushEntity);
             if (target == null) continue;
 
+            if (VisGroupManager.IsEntityHidden(ent) || VisGroupManager.IsEntityHidden(target)) continue;
+
             var lines = new[] { new VertexPositionColor(ent.Position, Color.Goldenrod), new VertexPositionColor(target.Position, Color.Goldenrod) };
             BasicEffect.World = Matrix.Identity;
             foreach (var pass in BasicEffect.CurrentTechnique.Passes)
@@ -1089,6 +1094,8 @@ public class MapperView : IEditorScene
         host.GraphicsDevice.RasterizerState = normalRasterizer;
         for (int i = 0; i < MapTools.Hints.Length; i++)
         {
+            if (VisGroupManager.IsHintHidden(i)) continue;
+
             var hint = MapTools.Hints[i];
 
             DrawBillSprite(hintTex, hint.Position);
@@ -1125,6 +1132,8 @@ public class MapperView : IEditorScene
         SpriteBatch.Begin(blendState: BlendState.NonPremultiplied);
         for (int i = 0; i < MapTools.Hints.Length; i++)
         {
+            if (VisGroupManager.IsHintHidden(i)) continue;
+
             var hint = MapTools.Hints[i];
 
             var pos = host.GraphicsDevice.Viewport.Project(hint.Position + Vector3.Up * 0.6f, Viewport3DCamera.projectionMatrix, Viewport3DCamera.viewMatrix, Viewport3DCamera.worldMatrix);
@@ -1209,6 +1218,7 @@ public class MapperView : IEditorScene
         {
             var ent = MapTools.Entities[i];
             if (ent.IsBrushEntity) continue;
+            if (VisGroupManager.IsEntityHidden(ent)) continue;
 
             var box = BoundsFor(ent.EntityName);
             var worldBox = new BoundingBox(box.Min + ent.Position, box.Max + ent.Position);
@@ -1298,6 +1308,8 @@ public class MapperView : IEditorScene
         {
             var terrain = MapTools.Terrains[i];
 
+            if (VisGroupManager.IsTerrainHidden(i)) continue;
+
             if (frustum.Contains(terrain.Bounds) == ContainmentType.Disjoint) continue;
 
             bool isHighlighted = false;
@@ -1348,6 +1360,8 @@ public class MapperView : IEditorScene
 
         for (int i = 0; i < MapTools.Terrains.Length; i++)
         {
+            if (VisGroupManager.IsTerrainHidden(i)) continue;
+
             var terrain = MapTools.Terrains[i];
 
             bool isHighlighted = false;
@@ -1405,6 +1419,7 @@ public class MapperView : IEditorScene
             var b = MapTools.Brushes[i];
 
             if (b.isUsedForTerrain) continue;
+            if (VisGroupManager.IsBrushHidden(i)) continue;
             if (i < MapTools.BrushBounds.Length && frustum.Contains(MapTools.BrushBounds[i]) == ContainmentType.Disjoint) continue;
 
             var world = Matrix.CreateWorld(b.Position, Vector3.Forward, Vector3.Up);
@@ -1451,6 +1466,7 @@ public class MapperView : IEditorScene
         foreach (var ent in MapTools.Entities)
         {
             if (!ent.IsBrushEntity) continue;
+            if (VisGroupManager.IsEntityHidden(ent)) continue;
 
             BoundingBox? unionBounds = null;
             foreach (var bi in ent.BrushIndices)

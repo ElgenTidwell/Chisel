@@ -911,6 +911,8 @@ namespace Engine
             Blockmap.Clear();
             ActiveStaticLights.Clear();
 
+            FogBeginDepth = 1f; FogEndDepth = 10f; FogStrength = 0f; FogColor = Color.Transparent;
+
             ActiveMapPath = path;
             IsLoading = true;
             loadingException = null;

@@ -117,7 +117,7 @@ public class CameraDirector : WorldEntity
 
             if (segmentT >= 1f)
             {
-                currentTarg.CallOutput("OnPass",entity);
+                currentTarg.CallOutput("OnPassed",entity);
 
                 prevTarg = currentTarg;
                 currentTarg = nextTarg;

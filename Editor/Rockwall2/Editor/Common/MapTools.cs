@@ -559,12 +559,16 @@ public static class MapTools
     {
         var process = new Process();
         var psi = new ProcessStartInfo();
-        psi.FileName = "cmd.exe";
+        psi.FileName = OperatingSystem.IsWindows() ? "cmd.exe" : "/bin/sh";
         psi.RedirectStandardInput = true;
         psi.RedirectStandardOutput = true;
         psi.RedirectStandardError = true;
         psi.UseShellExecute = false;
         psi.WorkingDirectory = workingDirectory;
+        if (!OperatingSystem.IsWindows())
+        {
+            psi.Environment["PATH"] = $"{workingDirectory}:{Environment.GetEnvironmentVariable("PATH")}";
+        }
         process.StartInfo = psi;
         process.Start();
         using (StreamWriter sw = process.StandardInput)

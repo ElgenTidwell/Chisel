@@ -1,0 +1,9 @@
+{
+  "name": "Dev Light Gray",
+  "texture": "Textures/dev/devlightgrey",
+  "specular": "Textures/base/basicSpecular",
+  "normal": "Textures/dev/devnormal",
+  "surfaceType": "concrete",
+  "reflectivity": 0.7,
+  "transparent": false
+}

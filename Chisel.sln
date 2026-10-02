@@ -27,6 +27,8 @@ Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "ChiselModelTypes", "Shared\
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "ChiselSharedTypes", "Shared\ChiselSharedTypes\ChiselSharedTypes.shproj", "{7ADA2BD2-A95B-47D8-8DF7-2C9450722247}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MinimalGame", "MinimalGame\MinimalGame.csproj", "{DC61E63A-7B6D-E3CB-62A5-FE6774EA5930}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +59,10 @@ Global
 		{07684182-ED0C-B29B-91EA-A69159297732}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{07684182-ED0C-B29B-91EA-A69159297732}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{07684182-ED0C-B29B-91EA-A69159297732}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DC61E63A-7B6D-E3CB-62A5-FE6774EA5930}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC61E63A-7B6D-E3CB-62A5-FE6774EA5930}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC61E63A-7B6D-E3CB-62A5-FE6774EA5930}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC61E63A-7B6D-E3CB-62A5-FE6774EA5930}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

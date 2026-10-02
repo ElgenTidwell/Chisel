@@ -1,0 +1,71 @@
+[
+	{
+		"name": "devgrey",
+		"texture": "Textures/devgrey",
+		"normal": "Textures/basicNormal",
+		"specular": "Textures/basicSpecular",
+		"surfaceType": "concrete",
+		"reflectivity": 1
+	},
+	{
+		"name": "tool_skybox",
+		"texture": "Textures/tool_skybox",
+		"normal": "Textures/basicNormal",
+		"specular": "Textures/basicSpecular",
+		"surfaceType": "concrete",
+		"reflectivity": 0.2
+	},
+	{
+		"name": "tool_lightnodevolume",
+		"texture": "Textures/tool_lightnodevolume",
+		"normal": "Textures/basicNormal",
+		"specular": "Textures/basicSpecular",
+		"surfaceType": "concrete",
+		"reflectivity": 0.2
+	},
+	{
+		"name": "tool_clip",
+		"texture": "Textures/tool_clip",
+		"normal": "Textures/basicNormal",
+		"specular": "Textures/basicSpecular",
+		"surfaceType": "concrete",
+		"reflectivity": 0.2
+	},
+	{
+		"name": "tool_trigger",
+		"texture": "Textures/tool_trigger",
+		"normal": "Textures/basicNormal",
+		"specular": "Textures/basicSpecular",
+		"surfaceType": "concrete",
+		"reflectivity": 0.2
+	},
+	{
+		"name": "tool_nodraw",
+		"texture": "Textures/tool_nodraw",
+		"normal": "Textures/basicNormal",
+		"specular": "Textures/basicSpecular",
+		"surfaceType": "concrete",
+		"reflectivity": 0.2
+	},
+	{
+		"name": "smoke",
+		"texture": "Textures/smoke",
+		"normal": "Textures/basicNormal",
+		"surfaceType": "concrete",
+		"reflectivity": 0.2
+	},
+	{
+		"name": "debris",
+		"texture": "Textures/debris",
+		"normal": "Textures/basicNormal",
+		"surfaceType": "concrete",
+		"reflectivity": 0.2
+	},
+	{
+		"name": "blood_spray",
+		"texture": "Textures/bloodspray",
+		"normal": "Textures/basicNormal",
+		"surfaceType": "concrete",
+		"reflectivity": 0.2
+	}
+]

@@ -1,0 +1,13 @@
+{
+  "UserEvents": {
+    "c4c629e594f7e698d6697ecf31cd74ceb146fc2eedabaa6171f1547a1e13d908": [
+      {
+        "NewName": null,
+        "OldName": "PlayerHUD",
+        "ElementType": "Screens",
+        "EventType": 1,
+        "TimestampUtc": "2026-10-02T01:56:29.4180718Z"
+      }
+    ]
+  }
+}

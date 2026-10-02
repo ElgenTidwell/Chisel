@@ -1,0 +1,146 @@
+{
+	"root": "../Working/",
+	"references":
+	[
+
+	],
+	"content": {
+		"flatTextures": {
+			"path": "Textures/*.png",
+			"recursive": "True",
+			"action": "build",
+			"importer": "TextureImporter",
+			"processor": "TextureProcessor",
+			"processorParam": {
+				"ColorKeyColor": "255,0,255,255",
+				"ColorKeyEnabled": "False",
+				"GenerateMipmaps": "True",
+				"PremultiplyAlpha": "False",
+				"ResizeToPowerOfTwo": "False",
+				"MakeSquare": "False",
+				"TextureFormat": "Color"
+			}
+		},
+		"skyTextures": {
+			"path": "Textures/Sky/*.dds",
+			"recursive": "False",
+			"action": "build",
+			"importer": "TextureImporter",
+			"processor": "TextureProcessor",
+			"processorParam": {
+				"ColorKeyColor": "255,0,255,255",
+				"ColorKeyEnabled": "False",
+				"GenerateMipmaps": "False",
+				"PremultiplyAlpha": "True",
+				"ResizeToPowerOfTwo": "False",
+				"MakeSquare": "False",
+				"TextureFormat": "Color"
+			}
+		},
+		"skyTexturesHDR": {
+			"path": "Textures/Sky/*.hdr",
+			"recursive": "True",
+			"action": "copy"
+		},
+		"particles": {
+			"path": "Particles/*.crp",
+			"recursive": "True",
+			"action": "copy"
+		},
+		"scripts": {
+			"path": "Scripts/*.*",
+			"recursive": "True",
+			"action": "copy"
+		},
+		"mapFiles": {
+			"path": "Maps/*.cmap",
+			"recursive": "False",
+			"action": "copy"
+		},
+		"mapLightmaps": {
+			"path": "Maps/*.clm",
+			"recursive": "False",
+			"action": "copy"
+		},
+		"fonts": {
+			"path": "Fonts/*.ttf",
+			"recursive": "True",
+			"action": "copy"
+		},
+		"UITextures": {
+			"path": "UI/*.png",
+			"recursive": "True",
+			"action": "build",
+			"importer": "TextureImporter",
+			"processor": "TextureProcessor",
+			"processorParam": {
+				"ColorKeyColor": "255,0,255,255",
+				"ColorKeyEnabled": "False",
+				"GenerateMipmaps": "False",
+				"PremultiplyAlpha": "False",
+				"ResizeToPowerOfTwo": "False",
+				"MakeSquare": "False",
+				"TextureFormat": "Color"
+			}
+		},
+		"gum": {
+			"path": "Gum/*.*",
+			"recursive": "True",
+			"action": "copy"
+		},
+		"audio": {
+			"path": "Audio/*.ogg",
+			"recursive": "True",
+			"action": "copy"
+		},
+		"materials": {
+			"path": "Materials/*.cmt",
+			"recursive": "True",
+			"action": "copy"
+		},
+		"models": {
+			"path": "Models/*.ccmdl",
+			"recursive": "True",
+			"action": "copy"
+		},
+		"morphs": {
+			"path": "Scenes/*.morph",
+			"recursive": "True",
+			"action": "copy"
+		},
+		"choreo": {
+			"path": "Scenes/*.choreo",
+			"recursive": "True",
+			"action": "copy"
+		},
+		"shaders": {
+			"path": "Shaders/*.fx",
+			"importer": "EffectImporter",
+			"processor": "EffectProcessor",
+			"processorParam": {
+				"DebugMode": "Auto"
+			},
+			"action": "build"
+		},
+		"glshadersdef": {
+			"path": "Shaders/*.csh",
+			"recursive": "True",
+			"action": "copy"
+		},
+		"glshadersvert": {
+			"path": "Shaders/*.vert",
+			"recursive": "True",
+			"action": "copy"
+		},
+		"glshadersfrag": {
+			"path": "Shaders/*.frag",
+			"recursive": "True",
+			"action": "copy"
+		},
+		"glshadershelper": {
+			"path": "Shaders/*.glsl",
+			"recursive": "True",
+			"action": "copy"
+		}
+	}
+}

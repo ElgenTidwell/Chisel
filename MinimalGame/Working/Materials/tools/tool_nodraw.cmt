@@ -1,0 +1,9 @@
+{
+  "name": "tool_nodraw",
+  "texture": "Textures/tools/tool_nodraw",
+  "specular": "Textures/base/basicSpecular",
+  "normal": "Textures/base/basicNormal",
+  "surfaceType": "concrete",
+  "reflectivity": 0.2,
+  "transparent": false
+}

@@ -1,0 +1,1535 @@
+
+#----------------------------- Global Properties ----------------------------#
+
+/outputDir:bin/$(Platform)
+/intermediateDir:obj/$(Platform)
+/platform:DesktopGL
+/config:
+/profile:Reach
+/compress:True
+
+#-------------------------------- References --------------------------------#
+
+
+#---------------------------------- Content ---------------------------------#
+
+#begin ../Working/Fonts/default.ttf
+/copy:../Working/Fonts/default.ttf;Fonts/default.ttf
+
+#begin ../Working/Gum/.gumfcs
+/copy:../Working/Gum/.gumfcs;Gum/.gumfcs
+
+#begin ../Working/Gum/Behaviors/ButtonBehavior.behx
+/copy:../Working/Gum/Behaviors/ButtonBehavior.behx;Gum/Behaviors/ButtonBehavior.behx
+
+#begin ../Working/Gum/Behaviors/CheckBoxBehavior.behx
+/copy:../Working/Gum/Behaviors/CheckBoxBehavior.behx;Gum/Behaviors/CheckBoxBehavior.behx
+
+#begin ../Working/Gum/Behaviors/ComboBoxBehavior.behx
+/copy:../Working/Gum/Behaviors/ComboBoxBehavior.behx;Gum/Behaviors/ComboBoxBehavior.behx
+
+#begin ../Working/Gum/Behaviors/DialogBoxBehavior.behx
+/copy:../Working/Gum/Behaviors/DialogBoxBehavior.behx;Gum/Behaviors/DialogBoxBehavior.behx
+
+#begin ../Working/Gum/Behaviors/InputDeviceSelectionItemBehavior.behx
+/copy:../Working/Gum/Behaviors/InputDeviceSelectionItemBehavior.behx;Gum/Behaviors/InputDeviceSelectionItemBehavior.behx
+
+#begin ../Working/Gum/Behaviors/InputDeviceSelectorBehavior.behx
+/copy:../Working/Gum/Behaviors/InputDeviceSelectorBehavior.behx;Gum/Behaviors/InputDeviceSelectorBehavior.behx
+
+#begin ../Working/Gum/Behaviors/LabelBehavior.behx
+/copy:../Working/Gum/Behaviors/LabelBehavior.behx;Gum/Behaviors/LabelBehavior.behx
+
+#begin ../Working/Gum/Behaviors/ListBoxBehavior.behx
+/copy:../Working/Gum/Behaviors/ListBoxBehavior.behx;Gum/Behaviors/ListBoxBehavior.behx
+
+#begin ../Working/Gum/Behaviors/ListBoxItemBehavior.behx
+/copy:../Working/Gum/Behaviors/ListBoxItemBehavior.behx;Gum/Behaviors/ListBoxItemBehavior.behx
+
+#begin ../Working/Gum/Behaviors/MenuBehavior.behx
+/copy:../Working/Gum/Behaviors/MenuBehavior.behx;Gum/Behaviors/MenuBehavior.behx
+
+#begin ../Working/Gum/Behaviors/MenuItemBehavior.behx
+/copy:../Working/Gum/Behaviors/MenuItemBehavior.behx;Gum/Behaviors/MenuItemBehavior.behx
+
+#begin ../Working/Gum/Behaviors/OnScreenKeyboardBehavior.behx
+/copy:../Working/Gum/Behaviors/OnScreenKeyboardBehavior.behx;Gum/Behaviors/OnScreenKeyboardBehavior.behx
+
+#begin ../Working/Gum/Behaviors/PanelBehavior.behx
+/copy:../Working/Gum/Behaviors/PanelBehavior.behx;Gum/Behaviors/PanelBehavior.behx
+
+#begin ../Working/Gum/Behaviors/PasswordBoxBehavior.behx
+/copy:../Working/Gum/Behaviors/PasswordBoxBehavior.behx;Gum/Behaviors/PasswordBoxBehavior.behx
+
+#begin ../Working/Gum/Behaviors/PlayerJoinViewBehavior.behx
+/copy:../Working/Gum/Behaviors/PlayerJoinViewBehavior.behx;Gum/Behaviors/PlayerJoinViewBehavior.behx
+
+#begin ../Working/Gum/Behaviors/PlayerJoinViewItemBehavior.behx
+/copy:../Working/Gum/Behaviors/PlayerJoinViewItemBehavior.behx;Gum/Behaviors/PlayerJoinViewItemBehavior.behx
+
+#begin ../Working/Gum/Behaviors/RadioButtonBehavior.behx
+/copy:../Working/Gum/Behaviors/RadioButtonBehavior.behx;Gum/Behaviors/RadioButtonBehavior.behx
+
+#begin ../Working/Gum/Behaviors/ScrollBarBehavior.behx
+/copy:../Working/Gum/Behaviors/ScrollBarBehavior.behx;Gum/Behaviors/ScrollBarBehavior.behx
+
+#begin ../Working/Gum/Behaviors/ScrollViewerBehavior.behx
+/copy:../Working/Gum/Behaviors/ScrollViewerBehavior.behx;Gum/Behaviors/ScrollViewerBehavior.behx
+
+#begin ../Working/Gum/Behaviors/SettingsViewBehavior.behx
+/copy:../Working/Gum/Behaviors/SettingsViewBehavior.behx;Gum/Behaviors/SettingsViewBehavior.behx
+
+#begin ../Working/Gum/Behaviors/SliderBehavior.behx
+/copy:../Working/Gum/Behaviors/SliderBehavior.behx;Gum/Behaviors/SliderBehavior.behx
+
+#begin ../Working/Gum/Behaviors/StackPanelBehavior.behx
+/copy:../Working/Gum/Behaviors/StackPanelBehavior.behx;Gum/Behaviors/StackPanelBehavior.behx
+
+#begin ../Working/Gum/Behaviors/TextBoxBehavior.behx
+/copy:../Working/Gum/Behaviors/TextBoxBehavior.behx;Gum/Behaviors/TextBoxBehavior.behx
+
+#begin ../Working/Gum/Behaviors/ToastBehavior.behx
+/copy:../Working/Gum/Behaviors/ToastBehavior.behx;Gum/Behaviors/ToastBehavior.behx
+
+#begin ../Working/Gum/Behaviors/ToggleBehavior.behx
+/copy:../Working/Gum/Behaviors/ToggleBehavior.behx;Gum/Behaviors/ToggleBehavior.behx
+
+#begin ../Working/Gum/Behaviors/TreeViewBehavior.behx
+/copy:../Working/Gum/Behaviors/TreeViewBehavior.behx;Gum/Behaviors/TreeViewBehavior.behx
+
+#begin ../Working/Gum/Behaviors/TreeViewItemBehavior.behx
+/copy:../Working/Gum/Behaviors/TreeViewItemBehavior.behx;Gum/Behaviors/TreeViewItemBehavior.behx
+
+#begin ../Working/Gum/Behaviors/UserControlBehavior.behx
+/copy:../Working/Gum/Behaviors/UserControlBehavior.behx;Gum/Behaviors/UserControlBehavior.behx
+
+#begin ../Working/Gum/Components/Controls/ButtonClose.gucx
+/copy:../Working/Gum/Components/Controls/ButtonClose.gucx;Gum/Components/Controls/ButtonClose.gucx
+
+#begin ../Working/Gum/Components/Controls/ButtonConfirm.gucx
+/copy:../Working/Gum/Components/Controls/ButtonConfirm.gucx;Gum/Components/Controls/ButtonConfirm.gucx
+
+#begin ../Working/Gum/Components/Controls/ButtonDeny.gucx
+/copy:../Working/Gum/Components/Controls/ButtonDeny.gucx;Gum/Components/Controls/ButtonDeny.gucx
+
+#begin ../Working/Gum/Components/Controls/ButtonIcon.gucx
+/copy:../Working/Gum/Components/Controls/ButtonIcon.gucx;Gum/Components/Controls/ButtonIcon.gucx
+
+#begin ../Working/Gum/Components/Controls/ButtonStandard.gucx
+/copy:../Working/Gum/Components/Controls/ButtonStandard.gucx;Gum/Components/Controls/ButtonStandard.gucx
+
+#begin ../Working/Gum/Components/Controls/ButtonStandardIcon.gucx
+/copy:../Working/Gum/Components/Controls/ButtonStandardIcon.gucx;Gum/Components/Controls/ButtonStandardIcon.gucx
+
+#begin ../Working/Gum/Components/Controls/ButtonTab.gucx
+/copy:../Working/Gum/Components/Controls/ButtonTab.gucx;Gum/Components/Controls/ButtonTab.gucx
+
+#begin ../Working/Gum/Components/Controls/CheckBox.gucx
+/copy:../Working/Gum/Components/Controls/CheckBox.gucx;Gum/Components/Controls/CheckBox.gucx
+
+#begin ../Working/Gum/Components/Controls/ComboBox.gucx
+/copy:../Working/Gum/Components/Controls/ComboBox.gucx;Gum/Components/Controls/ComboBox.gucx
+
+#begin ../Working/Gum/Components/Controls/DialogBox.gucx
+/copy:../Working/Gum/Components/Controls/DialogBox.gucx;Gum/Components/Controls/DialogBox.gucx
+
+#begin ../Working/Gum/Components/Controls/InputDeviceSelectionItem.gucx
+/copy:../Working/Gum/Components/Controls/InputDeviceSelectionItem.gucx;Gum/Components/Controls/InputDeviceSelectionItem.gucx
+
+#begin ../Working/Gum/Components/Controls/InputDeviceSelector.gucx
+/copy:../Working/Gum/Components/Controls/InputDeviceSelector.gucx;Gum/Components/Controls/InputDeviceSelector.gucx
+
+#begin ../Working/Gum/Components/Controls/Keyboard.gucx
+/copy:../Working/Gum/Components/Controls/Keyboard.gucx;Gum/Components/Controls/Keyboard.gucx
+
+#begin ../Working/Gum/Components/Controls/KeyboardAnimations.ganx
+/copy:../Working/Gum/Components/Controls/KeyboardAnimations.ganx;Gum/Components/Controls/KeyboardAnimations.ganx
+
+#begin ../Working/Gum/Components/Controls/KeyboardKey.gucx
+/copy:../Working/Gum/Components/Controls/KeyboardKey.gucx;Gum/Components/Controls/KeyboardKey.gucx
+
+#begin ../Working/Gum/Components/Controls/KeyboardKeyAnimations.ganx
+/copy:../Working/Gum/Components/Controls/KeyboardKeyAnimations.ganx;Gum/Components/Controls/KeyboardKeyAnimations.ganx
+
+#begin ../Working/Gum/Components/Controls/Label.gucx
+/copy:../Working/Gum/Components/Controls/Label.gucx;Gum/Components/Controls/Label.gucx
+
+#begin ../Working/Gum/Components/Controls/ListBox.gucx
+/copy:../Working/Gum/Components/Controls/ListBox.gucx;Gum/Components/Controls/ListBox.gucx
+
+#begin ../Working/Gum/Components/Controls/ListBoxItem.gucx
+/copy:../Working/Gum/Components/Controls/ListBoxItem.gucx;Gum/Components/Controls/ListBoxItem.gucx
+
+#begin ../Working/Gum/Components/Controls/Menu.gucx
+/copy:../Working/Gum/Components/Controls/Menu.gucx;Gum/Components/Controls/Menu.gucx
+
+#begin ../Working/Gum/Components/Controls/MenuItem.gucx
+/copy:../Working/Gum/Components/Controls/MenuItem.gucx;Gum/Components/Controls/MenuItem.gucx
+
+#begin ../Working/Gum/Components/Controls/Panel.gucx
+/copy:../Working/Gum/Components/Controls/Panel.gucx;Gum/Components/Controls/Panel.gucx
+
+#begin ../Working/Gum/Components/Controls/PasswordBox.gucx
+/copy:../Working/Gum/Components/Controls/PasswordBox.gucx;Gum/Components/Controls/PasswordBox.gucx
+
+#begin ../Working/Gum/Components/Controls/PlayerJoinView.gucx
+/copy:../Working/Gum/Components/Controls/PlayerJoinView.gucx;Gum/Components/Controls/PlayerJoinView.gucx
+
+#begin ../Working/Gum/Components/Controls/PlayerJoinViewItem.gucx
+/copy:../Working/Gum/Components/Controls/PlayerJoinViewItem.gucx;Gum/Components/Controls/PlayerJoinViewItem.gucx
+
+#begin ../Working/Gum/Components/Controls/RadioButton.gucx
+/copy:../Working/Gum/Components/Controls/RadioButton.gucx;Gum/Components/Controls/RadioButton.gucx
+
+#begin ../Working/Gum/Components/Controls/ScrollBar.gucx
+/copy:../Working/Gum/Components/Controls/ScrollBar.gucx;Gum/Components/Controls/ScrollBar.gucx
+
+#begin ../Working/Gum/Components/Controls/ScrollViewer.gucx
+/copy:../Working/Gum/Components/Controls/ScrollViewer.gucx;Gum/Components/Controls/ScrollViewer.gucx
+
+#begin ../Working/Gum/Components/Controls/SettingsView.gucx
+/copy:../Working/Gum/Components/Controls/SettingsView.gucx;Gum/Components/Controls/SettingsView.gucx
+
+#begin ../Working/Gum/Components/Controls/Slider.gucx
+/copy:../Working/Gum/Components/Controls/Slider.gucx;Gum/Components/Controls/Slider.gucx
+
+#begin ../Working/Gum/Components/Controls/StackPanel.gucx
+/copy:../Working/Gum/Components/Controls/StackPanel.gucx;Gum/Components/Controls/StackPanel.gucx
+
+#begin ../Working/Gum/Components/Controls/TextBox.gucx
+/copy:../Working/Gum/Components/Controls/TextBox.gucx;Gum/Components/Controls/TextBox.gucx
+
+#begin ../Working/Gum/Components/Controls/TextBoxAnimations.ganx
+/copy:../Working/Gum/Components/Controls/TextBoxAnimations.ganx;Gum/Components/Controls/TextBoxAnimations.ganx
+
+#begin ../Working/Gum/Components/Controls/Toast.gucx
+/copy:../Working/Gum/Components/Controls/Toast.gucx;Gum/Components/Controls/Toast.gucx
+
+#begin ../Working/Gum/Components/Controls/TreeView.gucx
+/copy:../Working/Gum/Components/Controls/TreeView.gucx;Gum/Components/Controls/TreeView.gucx
+
+#begin ../Working/Gum/Components/Controls/TreeViewItem.gucx
+/copy:../Working/Gum/Components/Controls/TreeViewItem.gucx;Gum/Components/Controls/TreeViewItem.gucx
+
+#begin ../Working/Gum/Components/Controls/TreeViewToggle.gucx
+/copy:../Working/Gum/Components/Controls/TreeViewToggle.gucx;Gum/Components/Controls/TreeViewToggle.gucx
+
+#begin ../Working/Gum/Components/Controls/TreeViewToggleAnimations.ganx
+/copy:../Working/Gum/Components/Controls/TreeViewToggleAnimations.ganx;Gum/Components/Controls/TreeViewToggleAnimations.ganx
+
+#begin ../Working/Gum/Components/Controls/UserControl.gucx
+/copy:../Working/Gum/Components/Controls/UserControl.gucx;Gum/Components/Controls/UserControl.gucx
+
+#begin ../Working/Gum/Components/Custom/ButtonLabel.gucx
+/copy:../Working/Gum/Components/Custom/ButtonLabel.gucx;Gum/Components/Custom/ButtonLabel.gucx
+
+#begin ../Working/Gum/Components/Custom/ButtonLabelAnimations.ganx
+/copy:../Working/Gum/Components/Custom/ButtonLabelAnimations.ganx;Gum/Components/Custom/ButtonLabelAnimations.ganx
+
+#begin ../Working/Gum/Components/Elements/CautionLines.gucx
+/copy:../Working/Gum/Components/Elements/CautionLines.gucx;Gum/Components/Elements/CautionLines.gucx
+
+#begin ../Working/Gum/Components/Elements/Divider.gucx
+/copy:../Working/Gum/Components/Elements/Divider.gucx;Gum/Components/Elements/Divider.gucx
+
+#begin ../Working/Gum/Components/Elements/DividerHorizontal.gucx
+/copy:../Working/Gum/Components/Elements/DividerHorizontal.gucx;Gum/Components/Elements/DividerHorizontal.gucx
+
+#begin ../Working/Gum/Components/Elements/DividerHorizontalAnimations.ganx
+/copy:../Working/Gum/Components/Elements/DividerHorizontalAnimations.ganx;Gum/Components/Elements/DividerHorizontalAnimations.ganx
+
+#begin ../Working/Gum/Components/Elements/DividerVertical.gucx
+/copy:../Working/Gum/Components/Elements/DividerVertical.gucx;Gum/Components/Elements/DividerVertical.gucx
+
+#begin ../Working/Gum/Components/Elements/DividerVerticalAnimations.ganx
+/copy:../Working/Gum/Components/Elements/DividerVerticalAnimations.ganx;Gum/Components/Elements/DividerVerticalAnimations.ganx
+
+#begin ../Working/Gum/Components/Elements/Icon.gucx
+/copy:../Working/Gum/Components/Elements/Icon.gucx;Gum/Components/Elements/Icon.gucx
+
+#begin ../Working/Gum/Components/Elements/IconAnimations.ganx
+/copy:../Working/Gum/Components/Elements/IconAnimations.ganx;Gum/Components/Elements/IconAnimations.ganx
+
+#begin ../Working/Gum/Components/Elements/PercentBar.gucx
+/copy:../Working/Gum/Components/Elements/PercentBar.gucx;Gum/Components/Elements/PercentBar.gucx
+
+#begin ../Working/Gum/Components/Elements/PercentBarIcon.gucx
+/copy:../Working/Gum/Components/Elements/PercentBarIcon.gucx;Gum/Components/Elements/PercentBarIcon.gucx
+
+#begin ../Working/Gum/Components/Elements/VerticalLines.gucx
+/copy:../Working/Gum/Components/Elements/VerticalLines.gucx;Gum/Components/Elements/VerticalLines.gucx
+
+#begin ../Working/Gum/Components/Styles.gucx
+/copy:../Working/Gum/Components/Styles.gucx;Gum/Components/Styles.gucx
+
+#begin ../Working/Gum/EventExport/gum_events.json
+/copy:../Working/Gum/EventExport/gum_events.json;Gum/EventExport/gum_events.json
+
+#begin ../Working/Gum/ExampleSpriteFrame.png
+/copy:../Working/Gum/ExampleSpriteFrame.png;Gum/ExampleSpriteFrame.png
+
+#begin ../Working/Gum/FontCache/Font10Arial_0.png
+/copy:../Working/Gum/FontCache/Font10Arial_0.png;Gum/FontCache/Font10Arial_0.png
+
+#begin ../Working/Gum/FontCache/Font10Arial_noSmooth_0.png
+/copy:../Working/Gum/FontCache/Font10Arial_noSmooth_0.png;Gum/FontCache/Font10Arial_noSmooth_0.png
+
+#begin ../Working/Gum/FontCache/Font10Arial_noSmooth.bmfc
+/copy:../Working/Gum/FontCache/Font10Arial_noSmooth.bmfc;Gum/FontCache/Font10Arial_noSmooth.bmfc
+
+#begin ../Working/Gum/FontCache/Font10Arial_noSmooth.fnt
+/copy:../Working/Gum/FontCache/Font10Arial_noSmooth.fnt;Gum/FontCache/Font10Arial_noSmooth.fnt
+
+#begin ../Working/Gum/FontCache/Font10Arial.bmfc
+/copy:../Working/Gum/FontCache/Font10Arial.bmfc;Gum/FontCache/Font10Arial.bmfc
+
+#begin ../Working/Gum/FontCache/Font10Arial.fnt
+/copy:../Working/Gum/FontCache/Font10Arial.fnt;Gum/FontCache/Font10Arial.fnt
+
+#begin ../Working/Gum/FontCache/Font10MS_Reference_Sans_Serif_0.png
+/copy:../Working/Gum/FontCache/Font10MS_Reference_Sans_Serif_0.png;Gum/FontCache/Font10MS_Reference_Sans_Serif_0.png
+
+#begin ../Working/Gum/FontCache/Font10MS_Reference_Sans_Serif_Bold_0.png
+/copy:../Working/Gum/FontCache/Font10MS_Reference_Sans_Serif_Bold_0.png;Gum/FontCache/Font10MS_Reference_Sans_Serif_Bold_0.png
+
+#begin ../Working/Gum/FontCache/Font10MS_Reference_Sans_Serif_Bold.bmfc
+/copy:../Working/Gum/FontCache/Font10MS_Reference_Sans_Serif_Bold.bmfc;Gum/FontCache/Font10MS_Reference_Sans_Serif_Bold.bmfc
+
+#begin ../Working/Gum/FontCache/Font10MS_Reference_Sans_Serif_Bold.fnt
+/copy:../Working/Gum/FontCache/Font10MS_Reference_Sans_Serif_Bold.fnt;Gum/FontCache/Font10MS_Reference_Sans_Serif_Bold.fnt
+
+#begin ../Working/Gum/FontCache/Font10MS_Reference_Sans_Serif_noSmooth_0.png
+/copy:../Working/Gum/FontCache/Font10MS_Reference_Sans_Serif_noSmooth_0.png;Gum/FontCache/Font10MS_Reference_Sans_Serif_noSmooth_0.png
+
+#begin ../Working/Gum/FontCache/Font10MS_Reference_Sans_Serif_noSmooth.bmfc
+/copy:../Working/Gum/FontCache/Font10MS_Reference_Sans_Serif_noSmooth.bmfc;Gum/FontCache/Font10MS_Reference_Sans_Serif_noSmooth.bmfc
+
+#begin ../Working/Gum/FontCache/Font10MS_Reference_Sans_Serif_noSmooth.fnt
+/copy:../Working/Gum/FontCache/Font10MS_Reference_Sans_Serif_noSmooth.fnt;Gum/FontCache/Font10MS_Reference_Sans_Serif_noSmooth.fnt
+
+#begin ../Working/Gum/FontCache/Font10MS_Reference_Sans_Serif.bmfc
+/copy:../Working/Gum/FontCache/Font10MS_Reference_Sans_Serif.bmfc;Gum/FontCache/Font10MS_Reference_Sans_Serif.bmfc
+
+#begin ../Working/Gum/FontCache/Font10MS_Reference_Sans_Serif.fnt
+/copy:../Working/Gum/FontCache/Font10MS_Reference_Sans_Serif.fnt;Gum/FontCache/Font10MS_Reference_Sans_Serif.fnt
+
+#begin ../Working/Gum/FontCache/Font12Arial_0.png
+/copy:../Working/Gum/FontCache/Font12Arial_0.png;Gum/FontCache/Font12Arial_0.png
+
+#begin ../Working/Gum/FontCache/Font12Arial_noSmooth_0.png
+/copy:../Working/Gum/FontCache/Font12Arial_noSmooth_0.png;Gum/FontCache/Font12Arial_noSmooth_0.png
+
+#begin ../Working/Gum/FontCache/Font12Arial_noSmooth.bmfc
+/copy:../Working/Gum/FontCache/Font12Arial_noSmooth.bmfc;Gum/FontCache/Font12Arial_noSmooth.bmfc
+
+#begin ../Working/Gum/FontCache/Font12Arial_noSmooth.fnt
+/copy:../Working/Gum/FontCache/Font12Arial_noSmooth.fnt;Gum/FontCache/Font12Arial_noSmooth.fnt
+
+#begin ../Working/Gum/FontCache/Font12Arial.bmfc
+/copy:../Working/Gum/FontCache/Font12Arial.bmfc;Gum/FontCache/Font12Arial.bmfc
+
+#begin ../Working/Gum/FontCache/Font12Arial.fnt
+/copy:../Working/Gum/FontCache/Font12Arial.fnt;Gum/FontCache/Font12Arial.fnt
+
+#begin ../Working/Gum/FontCache/Font12MS_Reference_Sans_Serif_0.png
+/copy:../Working/Gum/FontCache/Font12MS_Reference_Sans_Serif_0.png;Gum/FontCache/Font12MS_Reference_Sans_Serif_0.png
+
+#begin ../Working/Gum/FontCache/Font12MS_Reference_Sans_Serif_Bold_0.png
+/copy:../Working/Gum/FontCache/Font12MS_Reference_Sans_Serif_Bold_0.png;Gum/FontCache/Font12MS_Reference_Sans_Serif_Bold_0.png
+
+#begin ../Working/Gum/FontCache/Font12MS_Reference_Sans_Serif_Bold.bmfc
+/copy:../Working/Gum/FontCache/Font12MS_Reference_Sans_Serif_Bold.bmfc;Gum/FontCache/Font12MS_Reference_Sans_Serif_Bold.bmfc
+
+#begin ../Working/Gum/FontCache/Font12MS_Reference_Sans_Serif_Bold.fnt
+/copy:../Working/Gum/FontCache/Font12MS_Reference_Sans_Serif_Bold.fnt;Gum/FontCache/Font12MS_Reference_Sans_Serif_Bold.fnt
+
+#begin ../Working/Gum/FontCache/Font12MS_Reference_Sans_Serif_noSmooth_0.png
+/copy:../Working/Gum/FontCache/Font12MS_Reference_Sans_Serif_noSmooth_0.png;Gum/FontCache/Font12MS_Reference_Sans_Serif_noSmooth_0.png
+
+#begin ../Working/Gum/FontCache/Font12MS_Reference_Sans_Serif_noSmooth.bmfc
+/copy:../Working/Gum/FontCache/Font12MS_Reference_Sans_Serif_noSmooth.bmfc;Gum/FontCache/Font12MS_Reference_Sans_Serif_noSmooth.bmfc
+
+#begin ../Working/Gum/FontCache/Font12MS_Reference_Sans_Serif_noSmooth.fnt
+/copy:../Working/Gum/FontCache/Font12MS_Reference_Sans_Serif_noSmooth.fnt;Gum/FontCache/Font12MS_Reference_Sans_Serif_noSmooth.fnt
+
+#begin ../Working/Gum/FontCache/Font12MS_Reference_Sans_Serif.bmfc
+/copy:../Working/Gum/FontCache/Font12MS_Reference_Sans_Serif.bmfc;Gum/FontCache/Font12MS_Reference_Sans_Serif.bmfc
+
+#begin ../Working/Gum/FontCache/Font12MS_Reference_Sans_Serif.fnt
+/copy:../Working/Gum/FontCache/Font12MS_Reference_Sans_Serif.fnt;Gum/FontCache/Font12MS_Reference_Sans_Serif.fnt
+
+#begin ../Working/Gum/FontCache/Font141Arial_0.png
+/copy:../Working/Gum/FontCache/Font141Arial_0.png;Gum/FontCache/Font141Arial_0.png
+
+#begin ../Working/Gum/FontCache/Font141Arial.bmfc
+/copy:../Working/Gum/FontCache/Font141Arial.bmfc;Gum/FontCache/Font141Arial.bmfc
+
+#begin ../Working/Gum/FontCache/Font141Arial.fnt
+/copy:../Working/Gum/FontCache/Font141Arial.fnt;Gum/FontCache/Font141Arial.fnt
+
+#begin ../Working/Gum/FontCache/Font14Arial_0.png
+/copy:../Working/Gum/FontCache/Font14Arial_0.png;Gum/FontCache/Font14Arial_0.png
+
+#begin ../Working/Gum/FontCache/Font14Arial_Bold_0.png
+/copy:../Working/Gum/FontCache/Font14Arial_Bold_0.png;Gum/FontCache/Font14Arial_Bold_0.png
+
+#begin ../Working/Gum/FontCache/Font14Arial_Bold.bmfc
+/copy:../Working/Gum/FontCache/Font14Arial_Bold.bmfc;Gum/FontCache/Font14Arial_Bold.bmfc
+
+#begin ../Working/Gum/FontCache/Font14Arial_Bold.fnt
+/copy:../Working/Gum/FontCache/Font14Arial_Bold.fnt;Gum/FontCache/Font14Arial_Bold.fnt
+
+#begin ../Working/Gum/FontCache/Font14Arial_Italic_0.png
+/copy:../Working/Gum/FontCache/Font14Arial_Italic_0.png;Gum/FontCache/Font14Arial_Italic_0.png
+
+#begin ../Working/Gum/FontCache/Font14Arial_Italic.bmfc
+/copy:../Working/Gum/FontCache/Font14Arial_Italic.bmfc;Gum/FontCache/Font14Arial_Italic.bmfc
+
+#begin ../Working/Gum/FontCache/Font14Arial_Italic.fnt
+/copy:../Working/Gum/FontCache/Font14Arial_Italic.fnt;Gum/FontCache/Font14Arial_Italic.fnt
+
+#begin ../Working/Gum/FontCache/Font14Arial_Narrow_0.png
+/copy:../Working/Gum/FontCache/Font14Arial_Narrow_0.png;Gum/FontCache/Font14Arial_Narrow_0.png
+
+#begin ../Working/Gum/FontCache/Font14Arial_Narrow_Bold_0.png
+/copy:../Working/Gum/FontCache/Font14Arial_Narrow_Bold_0.png;Gum/FontCache/Font14Arial_Narrow_Bold_0.png
+
+#begin ../Working/Gum/FontCache/Font14Arial_Narrow_Bold.bmfc
+/copy:../Working/Gum/FontCache/Font14Arial_Narrow_Bold.bmfc;Gum/FontCache/Font14Arial_Narrow_Bold.bmfc
+
+#begin ../Working/Gum/FontCache/Font14Arial_Narrow_Bold.fnt
+/copy:../Working/Gum/FontCache/Font14Arial_Narrow_Bold.fnt;Gum/FontCache/Font14Arial_Narrow_Bold.fnt
+
+#begin ../Working/Gum/FontCache/Font14Arial_Narrow.bmfc
+/copy:../Working/Gum/FontCache/Font14Arial_Narrow.bmfc;Gum/FontCache/Font14Arial_Narrow.bmfc
+
+#begin ../Working/Gum/FontCache/Font14Arial_Narrow.fnt
+/copy:../Working/Gum/FontCache/Font14Arial_Narrow.fnt;Gum/FontCache/Font14Arial_Narrow.fnt
+
+#begin ../Working/Gum/FontCache/Font14Arial_noSmooth_0.png
+/copy:../Working/Gum/FontCache/Font14Arial_noSmooth_0.png;Gum/FontCache/Font14Arial_noSmooth_0.png
+
+#begin ../Working/Gum/FontCache/Font14Arial_noSmooth_Bold_0.png
+/copy:../Working/Gum/FontCache/Font14Arial_noSmooth_Bold_0.png;Gum/FontCache/Font14Arial_noSmooth_Bold_0.png
+
+#begin ../Working/Gum/FontCache/Font14Arial_noSmooth_Bold.bmfc
+/copy:../Working/Gum/FontCache/Font14Arial_noSmooth_Bold.bmfc;Gum/FontCache/Font14Arial_noSmooth_Bold.bmfc
+
+#begin ../Working/Gum/FontCache/Font14Arial_noSmooth_Bold.fnt
+/copy:../Working/Gum/FontCache/Font14Arial_noSmooth_Bold.fnt;Gum/FontCache/Font14Arial_noSmooth_Bold.fnt
+
+#begin ../Working/Gum/FontCache/Font14Arial_noSmooth_Italic_0.png
+/copy:../Working/Gum/FontCache/Font14Arial_noSmooth_Italic_0.png;Gum/FontCache/Font14Arial_noSmooth_Italic_0.png
+
+#begin ../Working/Gum/FontCache/Font14Arial_noSmooth_Italic.bmfc
+/copy:../Working/Gum/FontCache/Font14Arial_noSmooth_Italic.bmfc;Gum/FontCache/Font14Arial_noSmooth_Italic.bmfc
+
+#begin ../Working/Gum/FontCache/Font14Arial_noSmooth_Italic.fnt
+/copy:../Working/Gum/FontCache/Font14Arial_noSmooth_Italic.fnt;Gum/FontCache/Font14Arial_noSmooth_Italic.fnt
+
+#begin ../Working/Gum/FontCache/Font14Arial_noSmooth.bmfc
+/copy:../Working/Gum/FontCache/Font14Arial_noSmooth.bmfc;Gum/FontCache/Font14Arial_noSmooth.bmfc
+
+#begin ../Working/Gum/FontCache/Font14Arial_noSmooth.fnt
+/copy:../Working/Gum/FontCache/Font14Arial_noSmooth.fnt;Gum/FontCache/Font14Arial_noSmooth.fnt
+
+#begin ../Working/Gum/FontCache/Font14Arial.bmfc
+/copy:../Working/Gum/FontCache/Font14Arial.bmfc;Gum/FontCache/Font14Arial.bmfc
+
+#begin ../Working/Gum/FontCache/Font14Arial.fnt
+/copy:../Working/Gum/FontCache/Font14Arial.fnt;Gum/FontCache/Font14Arial.fnt
+
+#begin ../Working/Gum/FontCache/Font14Cascadia_Code_Light_0.png
+/copy:../Working/Gum/FontCache/Font14Cascadia_Code_Light_0.png;Gum/FontCache/Font14Cascadia_Code_Light_0.png
+
+#begin ../Working/Gum/FontCache/Font14Cascadia_Code_Light.bmfc
+/copy:../Working/Gum/FontCache/Font14Cascadia_Code_Light.bmfc;Gum/FontCache/Font14Cascadia_Code_Light.bmfc
+
+#begin ../Working/Gum/FontCache/Font14Cascadia_Code_Light.fnt
+/copy:../Working/Gum/FontCache/Font14Cascadia_Code_Light.fnt;Gum/FontCache/Font14Cascadia_Code_Light.fnt
+
+#begin ../Working/Gum/FontCache/Font14Cascadia_Mono_Light_0.png
+/copy:../Working/Gum/FontCache/Font14Cascadia_Mono_Light_0.png;Gum/FontCache/Font14Cascadia_Mono_Light_0.png
+
+#begin ../Working/Gum/FontCache/Font14Cascadia_Mono_Light.bmfc
+/copy:../Working/Gum/FontCache/Font14Cascadia_Mono_Light.bmfc;Gum/FontCache/Font14Cascadia_Mono_Light.bmfc
+
+#begin ../Working/Gum/FontCache/Font14Cascadia_Mono_Light.fnt
+/copy:../Working/Gum/FontCache/Font14Cascadia_Mono_Light.fnt;Gum/FontCache/Font14Cascadia_Mono_Light.fnt
+
+#begin ../Working/Gum/FontCache/Font14gameFont_0.png
+/copy:../Working/Gum/FontCache/Font14gameFont_0.png;Gum/FontCache/Font14gameFont_0.png
+
+#begin ../Working/Gum/FontCache/Font14gameFont.bmfc
+/copy:../Working/Gum/FontCache/Font14gameFont.bmfc;Gum/FontCache/Font14gameFont.bmfc
+
+#begin ../Working/Gum/FontCache/Font14gameFont.fnt
+/copy:../Working/Gum/FontCache/Font14gameFont.fnt;Gum/FontCache/Font14gameFont.fnt
+
+#begin ../Working/Gum/FontCache/Font14MS_Reference_Sans_Serif_0.png
+/copy:../Working/Gum/FontCache/Font14MS_Reference_Sans_Serif_0.png;Gum/FontCache/Font14MS_Reference_Sans_Serif_0.png
+
+#begin ../Working/Gum/FontCache/Font14MS_Reference_Sans_Serif_Bold_0.png
+/copy:../Working/Gum/FontCache/Font14MS_Reference_Sans_Serif_Bold_0.png;Gum/FontCache/Font14MS_Reference_Sans_Serif_Bold_0.png
+
+#begin ../Working/Gum/FontCache/Font14MS_Reference_Sans_Serif_Bold.bmfc
+/copy:../Working/Gum/FontCache/Font14MS_Reference_Sans_Serif_Bold.bmfc;Gum/FontCache/Font14MS_Reference_Sans_Serif_Bold.bmfc
+
+#begin ../Working/Gum/FontCache/Font14MS_Reference_Sans_Serif_Bold.fnt
+/copy:../Working/Gum/FontCache/Font14MS_Reference_Sans_Serif_Bold.fnt;Gum/FontCache/Font14MS_Reference_Sans_Serif_Bold.fnt
+
+#begin ../Working/Gum/FontCache/Font14MS_Reference_Sans_Serif_Italic_0.png
+/copy:../Working/Gum/FontCache/Font14MS_Reference_Sans_Serif_Italic_0.png;Gum/FontCache/Font14MS_Reference_Sans_Serif_Italic_0.png
+
+#begin ../Working/Gum/FontCache/Font14MS_Reference_Sans_Serif_Italic_Bold_0.png
+/copy:../Working/Gum/FontCache/Font14MS_Reference_Sans_Serif_Italic_Bold_0.png;Gum/FontCache/Font14MS_Reference_Sans_Serif_Italic_Bold_0.png
+
+#begin ../Working/Gum/FontCache/Font14MS_Reference_Sans_Serif_Italic_Bold.bmfc
+/copy:../Working/Gum/FontCache/Font14MS_Reference_Sans_Serif_Italic_Bold.bmfc;Gum/FontCache/Font14MS_Reference_Sans_Serif_Italic_Bold.bmfc
+
+#begin ../Working/Gum/FontCache/Font14MS_Reference_Sans_Serif_Italic_Bold.fnt
+/copy:../Working/Gum/FontCache/Font14MS_Reference_Sans_Serif_Italic_Bold.fnt;Gum/FontCache/Font14MS_Reference_Sans_Serif_Italic_Bold.fnt
+
+#begin ../Working/Gum/FontCache/Font14MS_Reference_Sans_Serif_Italic.bmfc
+/copy:../Working/Gum/FontCache/Font14MS_Reference_Sans_Serif_Italic.bmfc;Gum/FontCache/Font14MS_Reference_Sans_Serif_Italic.bmfc
+
+#begin ../Working/Gum/FontCache/Font14MS_Reference_Sans_Serif_Italic.fnt
+/copy:../Working/Gum/FontCache/Font14MS_Reference_Sans_Serif_Italic.fnt;Gum/FontCache/Font14MS_Reference_Sans_Serif_Italic.fnt
+
+#begin ../Working/Gum/FontCache/Font14MS_Reference_Sans_Serif_noSmooth_0.png
+/copy:../Working/Gum/FontCache/Font14MS_Reference_Sans_Serif_noSmooth_0.png;Gum/FontCache/Font14MS_Reference_Sans_Serif_noSmooth_0.png
+
+#begin ../Working/Gum/FontCache/Font14MS_Reference_Sans_Serif_noSmooth_Bold_0.png
+/copy:../Working/Gum/FontCache/Font14MS_Reference_Sans_Serif_noSmooth_Bold_0.png;Gum/FontCache/Font14MS_Reference_Sans_Serif_noSmooth_Bold_0.png
+
+#begin ../Working/Gum/FontCache/Font14MS_Reference_Sans_Serif_noSmooth_Bold.bmfc
+/copy:../Working/Gum/FontCache/Font14MS_Reference_Sans_Serif_noSmooth_Bold.bmfc;Gum/FontCache/Font14MS_Reference_Sans_Serif_noSmooth_Bold.bmfc
+
+#begin ../Working/Gum/FontCache/Font14MS_Reference_Sans_Serif_noSmooth_Bold.fnt
+/copy:../Working/Gum/FontCache/Font14MS_Reference_Sans_Serif_noSmooth_Bold.fnt;Gum/FontCache/Font14MS_Reference_Sans_Serif_noSmooth_Bold.fnt
+
+#begin ../Working/Gum/FontCache/Font14MS_Reference_Sans_Serif_noSmooth_Italic_0.png
+/copy:../Working/Gum/FontCache/Font14MS_Reference_Sans_Serif_noSmooth_Italic_0.png;Gum/FontCache/Font14MS_Reference_Sans_Serif_noSmooth_Italic_0.png
+
+#begin ../Working/Gum/FontCache/Font14MS_Reference_Sans_Serif_noSmooth_Italic.bmfc
+/copy:../Working/Gum/FontCache/Font14MS_Reference_Sans_Serif_noSmooth_Italic.bmfc;Gum/FontCache/Font14MS_Reference_Sans_Serif_noSmooth_Italic.bmfc
+
+#begin ../Working/Gum/FontCache/Font14MS_Reference_Sans_Serif_noSmooth_Italic.fnt
+/copy:../Working/Gum/FontCache/Font14MS_Reference_Sans_Serif_noSmooth_Italic.fnt;Gum/FontCache/Font14MS_Reference_Sans_Serif_noSmooth_Italic.fnt
+
+#begin ../Working/Gum/FontCache/Font14MS_Reference_Sans_Serif_noSmooth.bmfc
+/copy:../Working/Gum/FontCache/Font14MS_Reference_Sans_Serif_noSmooth.bmfc;Gum/FontCache/Font14MS_Reference_Sans_Serif_noSmooth.bmfc
+
+#begin ../Working/Gum/FontCache/Font14MS_Reference_Sans_Serif_noSmooth.fnt
+/copy:../Working/Gum/FontCache/Font14MS_Reference_Sans_Serif_noSmooth.fnt;Gum/FontCache/Font14MS_Reference_Sans_Serif_noSmooth.fnt
+
+#begin ../Working/Gum/FontCache/Font14MS_Reference_Sans_Serif.bmfc
+/copy:../Working/Gum/FontCache/Font14MS_Reference_Sans_Serif.bmfc;Gum/FontCache/Font14MS_Reference_Sans_Serif.bmfc
+
+#begin ../Working/Gum/FontCache/Font14MS_Reference_Sans_Serif.fnt
+/copy:../Working/Gum/FontCache/Font14MS_Reference_Sans_Serif.fnt;Gum/FontCache/Font14MS_Reference_Sans_Serif.fnt
+
+#begin ../Working/Gum/FontCache/Font16Arial_0.png
+/copy:../Working/Gum/FontCache/Font16Arial_0.png;Gum/FontCache/Font16Arial_0.png
+
+#begin ../Working/Gum/FontCache/Font16Arial_Bold_0.png
+/copy:../Working/Gum/FontCache/Font16Arial_Bold_0.png;Gum/FontCache/Font16Arial_Bold_0.png
+
+#begin ../Working/Gum/FontCache/Font16Arial_Bold.bmfc
+/copy:../Working/Gum/FontCache/Font16Arial_Bold.bmfc;Gum/FontCache/Font16Arial_Bold.bmfc
+
+#begin ../Working/Gum/FontCache/Font16Arial_Bold.fnt
+/copy:../Working/Gum/FontCache/Font16Arial_Bold.fnt;Gum/FontCache/Font16Arial_Bold.fnt
+
+#begin ../Working/Gum/FontCache/Font16Arial_noSmooth_Bold_0.png
+/copy:../Working/Gum/FontCache/Font16Arial_noSmooth_Bold_0.png;Gum/FontCache/Font16Arial_noSmooth_Bold_0.png
+
+#begin ../Working/Gum/FontCache/Font16Arial_noSmooth_Bold.bmfc
+/copy:../Working/Gum/FontCache/Font16Arial_noSmooth_Bold.bmfc;Gum/FontCache/Font16Arial_noSmooth_Bold.bmfc
+
+#begin ../Working/Gum/FontCache/Font16Arial_noSmooth_Bold.fnt
+/copy:../Working/Gum/FontCache/Font16Arial_noSmooth_Bold.fnt;Gum/FontCache/Font16Arial_noSmooth_Bold.fnt
+
+#begin ../Working/Gum/FontCache/Font16Arial.bmfc
+/copy:../Working/Gum/FontCache/Font16Arial.bmfc;Gum/FontCache/Font16Arial.bmfc
+
+#begin ../Working/Gum/FontCache/Font16Arial.fnt
+/copy:../Working/Gum/FontCache/Font16Arial.fnt;Gum/FontCache/Font16Arial.fnt
+
+#begin ../Working/Gum/FontCache/Font16MS_Reference_Sans_Serif_0.png
+/copy:../Working/Gum/FontCache/Font16MS_Reference_Sans_Serif_0.png;Gum/FontCache/Font16MS_Reference_Sans_Serif_0.png
+
+#begin ../Working/Gum/FontCache/Font16MS_Reference_Sans_Serif_Bold_0.png
+/copy:../Working/Gum/FontCache/Font16MS_Reference_Sans_Serif_Bold_0.png;Gum/FontCache/Font16MS_Reference_Sans_Serif_Bold_0.png
+
+#begin ../Working/Gum/FontCache/Font16MS_Reference_Sans_Serif_Bold.bmfc
+/copy:../Working/Gum/FontCache/Font16MS_Reference_Sans_Serif_Bold.bmfc;Gum/FontCache/Font16MS_Reference_Sans_Serif_Bold.bmfc
+
+#begin ../Working/Gum/FontCache/Font16MS_Reference_Sans_Serif_Bold.fnt
+/copy:../Working/Gum/FontCache/Font16MS_Reference_Sans_Serif_Bold.fnt;Gum/FontCache/Font16MS_Reference_Sans_Serif_Bold.fnt
+
+#begin ../Working/Gum/FontCache/Font16MS_Reference_Sans_Serif_noSmooth_Bold_0.png
+/copy:../Working/Gum/FontCache/Font16MS_Reference_Sans_Serif_noSmooth_Bold_0.png;Gum/FontCache/Font16MS_Reference_Sans_Serif_noSmooth_Bold_0.png
+
+#begin ../Working/Gum/FontCache/Font16MS_Reference_Sans_Serif_noSmooth_Bold.bmfc
+/copy:../Working/Gum/FontCache/Font16MS_Reference_Sans_Serif_noSmooth_Bold.bmfc;Gum/FontCache/Font16MS_Reference_Sans_Serif_noSmooth_Bold.bmfc
+
+#begin ../Working/Gum/FontCache/Font16MS_Reference_Sans_Serif_noSmooth_Bold.fnt
+/copy:../Working/Gum/FontCache/Font16MS_Reference_Sans_Serif_noSmooth_Bold.fnt;Gum/FontCache/Font16MS_Reference_Sans_Serif_noSmooth_Bold.fnt
+
+#begin ../Working/Gum/FontCache/Font16MS_Reference_Sans_Serif.bmfc
+/copy:../Working/Gum/FontCache/Font16MS_Reference_Sans_Serif.bmfc;Gum/FontCache/Font16MS_Reference_Sans_Serif.bmfc
+
+#begin ../Working/Gum/FontCache/Font16MS_Reference_Sans_Serif.fnt
+/copy:../Working/Gum/FontCache/Font16MS_Reference_Sans_Serif.fnt;Gum/FontCache/Font16MS_Reference_Sans_Serif.fnt
+
+#begin ../Working/Gum/FontCache/Font18Adobe_Song_Std_L_0.png
+/copy:../Working/Gum/FontCache/Font18Adobe_Song_Std_L_0.png;Gum/FontCache/Font18Adobe_Song_Std_L_0.png
+
+#begin ../Working/Gum/FontCache/Font18Adobe_Song_Std_L.bmfc
+/copy:../Working/Gum/FontCache/Font18Adobe_Song_Std_L.bmfc;Gum/FontCache/Font18Adobe_Song_Std_L.bmfc
+
+#begin ../Working/Gum/FontCache/Font18Adobe_Song_Std_L.fnt
+/copy:../Working/Gum/FontCache/Font18Adobe_Song_Std_L.fnt;Gum/FontCache/Font18Adobe_Song_Std_L.fnt
+
+#begin ../Working/Gum/FontCache/Font18Anonymous_Pro_0.png
+/copy:../Working/Gum/FontCache/Font18Anonymous_Pro_0.png;Gum/FontCache/Font18Anonymous_Pro_0.png
+
+#begin ../Working/Gum/FontCache/Font18Anonymous_Pro.bmfc
+/copy:../Working/Gum/FontCache/Font18Anonymous_Pro.bmfc;Gum/FontCache/Font18Anonymous_Pro.bmfc
+
+#begin ../Working/Gum/FontCache/Font18Anonymous_Pro.fnt
+/copy:../Working/Gum/FontCache/Font18Anonymous_Pro.fnt;Gum/FontCache/Font18Anonymous_Pro.fnt
+
+#begin ../Working/Gum/FontCache/Font18Arial_0.png
+/copy:../Working/Gum/FontCache/Font18Arial_0.png;Gum/FontCache/Font18Arial_0.png
+
+#begin ../Working/Gum/FontCache/Font18Arial_Bold_0.png
+/copy:../Working/Gum/FontCache/Font18Arial_Bold_0.png;Gum/FontCache/Font18Arial_Bold_0.png
+
+#begin ../Working/Gum/FontCache/Font18Arial_Bold.bmfc
+/copy:../Working/Gum/FontCache/Font18Arial_Bold.bmfc;Gum/FontCache/Font18Arial_Bold.bmfc
+
+#begin ../Working/Gum/FontCache/Font18Arial_Bold.fnt
+/copy:../Working/Gum/FontCache/Font18Arial_Bold.fnt;Gum/FontCache/Font18Arial_Bold.fnt
+
+#begin ../Working/Gum/FontCache/Font18Arial_Narrow_0.png
+/copy:../Working/Gum/FontCache/Font18Arial_Narrow_0.png;Gum/FontCache/Font18Arial_Narrow_0.png
+
+#begin ../Working/Gum/FontCache/Font18Arial_Narrow.bmfc
+/copy:../Working/Gum/FontCache/Font18Arial_Narrow.bmfc;Gum/FontCache/Font18Arial_Narrow.bmfc
+
+#begin ../Working/Gum/FontCache/Font18Arial_Narrow.fnt
+/copy:../Working/Gum/FontCache/Font18Arial_Narrow.fnt;Gum/FontCache/Font18Arial_Narrow.fnt
+
+#begin ../Working/Gum/FontCache/Font18Arial_noSmooth_Bold_0.png
+/copy:../Working/Gum/FontCache/Font18Arial_noSmooth_Bold_0.png;Gum/FontCache/Font18Arial_noSmooth_Bold_0.png
+
+#begin ../Working/Gum/FontCache/Font18Arial_noSmooth_Bold.bmfc
+/copy:../Working/Gum/FontCache/Font18Arial_noSmooth_Bold.bmfc;Gum/FontCache/Font18Arial_noSmooth_Bold.bmfc
+
+#begin ../Working/Gum/FontCache/Font18Arial_noSmooth_Bold.fnt
+/copy:../Working/Gum/FontCache/Font18Arial_noSmooth_Bold.fnt;Gum/FontCache/Font18Arial_noSmooth_Bold.fnt
+
+#begin ../Working/Gum/FontCache/Font18Arial.bmfc
+/copy:../Working/Gum/FontCache/Font18Arial.bmfc;Gum/FontCache/Font18Arial.bmfc
+
+#begin ../Working/Gum/FontCache/Font18Arial.fnt
+/copy:../Working/Gum/FontCache/Font18Arial.fnt;Gum/FontCache/Font18Arial.fnt
+
+#begin ../Working/Gum/FontCache/Font18MS_Reference_Sans_Serif_0.png
+/copy:../Working/Gum/FontCache/Font18MS_Reference_Sans_Serif_0.png;Gum/FontCache/Font18MS_Reference_Sans_Serif_0.png
+
+#begin ../Working/Gum/FontCache/Font18MS_Reference_Sans_Serif_Bold_0.png
+/copy:../Working/Gum/FontCache/Font18MS_Reference_Sans_Serif_Bold_0.png;Gum/FontCache/Font18MS_Reference_Sans_Serif_Bold_0.png
+
+#begin ../Working/Gum/FontCache/Font18MS_Reference_Sans_Serif_Bold.bmfc
+/copy:../Working/Gum/FontCache/Font18MS_Reference_Sans_Serif_Bold.bmfc;Gum/FontCache/Font18MS_Reference_Sans_Serif_Bold.bmfc
+
+#begin ../Working/Gum/FontCache/Font18MS_Reference_Sans_Serif_Bold.fnt
+/copy:../Working/Gum/FontCache/Font18MS_Reference_Sans_Serif_Bold.fnt;Gum/FontCache/Font18MS_Reference_Sans_Serif_Bold.fnt
+
+#begin ../Working/Gum/FontCache/Font18MS_Reference_Sans_Serif_noSmooth_Bold.bmfc
+/copy:../Working/Gum/FontCache/Font18MS_Reference_Sans_Serif_noSmooth_Bold.bmfc;Gum/FontCache/Font18MS_Reference_Sans_Serif_noSmooth_Bold.bmfc
+
+#begin ../Working/Gum/FontCache/Font18MS_Reference_Sans_Serif.bmfc
+/copy:../Working/Gum/FontCache/Font18MS_Reference_Sans_Serif.bmfc;Gum/FontCache/Font18MS_Reference_Sans_Serif.bmfc
+
+#begin ../Working/Gum/FontCache/Font18MS_Reference_Sans_Serif.fnt
+/copy:../Working/Gum/FontCache/Font18MS_Reference_Sans_Serif.fnt;Gum/FontCache/Font18MS_Reference_Sans_Serif.fnt
+
+#begin ../Working/Gum/FontCache/Font20Arial_0.png
+/copy:../Working/Gum/FontCache/Font20Arial_0.png;Gum/FontCache/Font20Arial_0.png
+
+#begin ../Working/Gum/FontCache/Font20Arial_Narrow_0.png
+/copy:../Working/Gum/FontCache/Font20Arial_Narrow_0.png;Gum/FontCache/Font20Arial_Narrow_0.png
+
+#begin ../Working/Gum/FontCache/Font20Arial_Narrow.bmfc
+/copy:../Working/Gum/FontCache/Font20Arial_Narrow.bmfc;Gum/FontCache/Font20Arial_Narrow.bmfc
+
+#begin ../Working/Gum/FontCache/Font20Arial_Narrow.fnt
+/copy:../Working/Gum/FontCache/Font20Arial_Narrow.fnt;Gum/FontCache/Font20Arial_Narrow.fnt
+
+#begin ../Working/Gum/FontCache/Font20Arial.bmfc
+/copy:../Working/Gum/FontCache/Font20Arial.bmfc;Gum/FontCache/Font20Arial.bmfc
+
+#begin ../Working/Gum/FontCache/Font20Arial.fnt
+/copy:../Working/Gum/FontCache/Font20Arial.fnt;Gum/FontCache/Font20Arial.fnt
+
+#begin ../Working/Gum/FontCache/Font22Arial_Bold_0.png
+/copy:../Working/Gum/FontCache/Font22Arial_Bold_0.png;Gum/FontCache/Font22Arial_Bold_0.png
+
+#begin ../Working/Gum/FontCache/Font22Arial_Bold.bmfc
+/copy:../Working/Gum/FontCache/Font22Arial_Bold.bmfc;Gum/FontCache/Font22Arial_Bold.bmfc
+
+#begin ../Working/Gum/FontCache/Font22Arial_Bold.fnt
+/copy:../Working/Gum/FontCache/Font22Arial_Bold.fnt;Gum/FontCache/Font22Arial_Bold.fnt
+
+#begin ../Working/Gum/FontCache/Font22Arial_noSmooth_Bold_0.png
+/copy:../Working/Gum/FontCache/Font22Arial_noSmooth_Bold_0.png;Gum/FontCache/Font22Arial_noSmooth_Bold_0.png
+
+#begin ../Working/Gum/FontCache/Font22Arial_noSmooth_Bold.bmfc
+/copy:../Working/Gum/FontCache/Font22Arial_noSmooth_Bold.bmfc;Gum/FontCache/Font22Arial_noSmooth_Bold.bmfc
+
+#begin ../Working/Gum/FontCache/Font22Arial_noSmooth_Bold.fnt
+/copy:../Working/Gum/FontCache/Font22Arial_noSmooth_Bold.fnt;Gum/FontCache/Font22Arial_noSmooth_Bold.fnt
+
+#begin ../Working/Gum/FontCache/Font22MS_Reference_Sans_Serif_0.png
+/copy:../Working/Gum/FontCache/Font22MS_Reference_Sans_Serif_0.png;Gum/FontCache/Font22MS_Reference_Sans_Serif_0.png
+
+#begin ../Working/Gum/FontCache/Font22MS_Reference_Sans_Serif_Bold_0.png
+/copy:../Working/Gum/FontCache/Font22MS_Reference_Sans_Serif_Bold_0.png;Gum/FontCache/Font22MS_Reference_Sans_Serif_Bold_0.png
+
+#begin ../Working/Gum/FontCache/Font22MS_Reference_Sans_Serif_Bold.bmfc
+/copy:../Working/Gum/FontCache/Font22MS_Reference_Sans_Serif_Bold.bmfc;Gum/FontCache/Font22MS_Reference_Sans_Serif_Bold.bmfc
+
+#begin ../Working/Gum/FontCache/Font22MS_Reference_Sans_Serif_Bold.fnt
+/copy:../Working/Gum/FontCache/Font22MS_Reference_Sans_Serif_Bold.fnt;Gum/FontCache/Font22MS_Reference_Sans_Serif_Bold.fnt
+
+#begin ../Working/Gum/FontCache/Font22MS_Reference_Sans_Serif_noSmooth_Bold.bmfc
+/copy:../Working/Gum/FontCache/Font22MS_Reference_Sans_Serif_noSmooth_Bold.bmfc;Gum/FontCache/Font22MS_Reference_Sans_Serif_noSmooth_Bold.bmfc
+
+#begin ../Working/Gum/FontCache/Font22MS_Reference_Sans_Serif.bmfc
+/copy:../Working/Gum/FontCache/Font22MS_Reference_Sans_Serif.bmfc;Gum/FontCache/Font22MS_Reference_Sans_Serif.bmfc
+
+#begin ../Working/Gum/FontCache/Font22MS_Reference_Sans_Serif.fnt
+/copy:../Working/Gum/FontCache/Font22MS_Reference_Sans_Serif.fnt;Gum/FontCache/Font22MS_Reference_Sans_Serif.fnt
+
+#begin ../Working/Gum/FontCache/Font24Arial_0.png
+/copy:../Working/Gum/FontCache/Font24Arial_0.png;Gum/FontCache/Font24Arial_0.png
+
+#begin ../Working/Gum/FontCache/Font24Arial.bmfc
+/copy:../Working/Gum/FontCache/Font24Arial.bmfc;Gum/FontCache/Font24Arial.bmfc
+
+#begin ../Working/Gum/FontCache/Font24Arial.fnt
+/copy:../Working/Gum/FontCache/Font24Arial.fnt;Gum/FontCache/Font24Arial.fnt
+
+#begin ../Working/Gum/FontCache/Font28Arial_Black_0.png
+/copy:../Working/Gum/FontCache/Font28Arial_Black_0.png;Gum/FontCache/Font28Arial_Black_0.png
+
+#begin ../Working/Gum/FontCache/Font28Arial_Black.bmfc
+/copy:../Working/Gum/FontCache/Font28Arial_Black.bmfc;Gum/FontCache/Font28Arial_Black.bmfc
+
+#begin ../Working/Gum/FontCache/Font28Arial_Black.fnt
+/copy:../Working/Gum/FontCache/Font28Arial_Black.fnt;Gum/FontCache/Font28Arial_Black.fnt
+
+#begin ../Working/Gum/FontCache/Font28Arial_Bold_0.png
+/copy:../Working/Gum/FontCache/Font28Arial_Bold_0.png;Gum/FontCache/Font28Arial_Bold_0.png
+
+#begin ../Working/Gum/FontCache/Font28Arial_Bold.bmfc
+/copy:../Working/Gum/FontCache/Font28Arial_Bold.bmfc;Gum/FontCache/Font28Arial_Bold.bmfc
+
+#begin ../Working/Gum/FontCache/Font28Arial_Bold.fnt
+/copy:../Working/Gum/FontCache/Font28Arial_Bold.fnt;Gum/FontCache/Font28Arial_Bold.fnt
+
+#begin ../Working/Gum/FontCache/Font28Arial_noSmooth_Bold_0.png
+/copy:../Working/Gum/FontCache/Font28Arial_noSmooth_Bold_0.png;Gum/FontCache/Font28Arial_noSmooth_Bold_0.png
+
+#begin ../Working/Gum/FontCache/Font28Arial_noSmooth_Bold.bmfc
+/copy:../Working/Gum/FontCache/Font28Arial_noSmooth_Bold.bmfc;Gum/FontCache/Font28Arial_noSmooth_Bold.bmfc
+
+#begin ../Working/Gum/FontCache/Font28Arial_noSmooth_Bold.fnt
+/copy:../Working/Gum/FontCache/Font28Arial_noSmooth_Bold.fnt;Gum/FontCache/Font28Arial_noSmooth_Bold.fnt
+
+#begin ../Working/Gum/FontCache/Font28MS_Reference_Sans_Serif_0.png
+/copy:../Working/Gum/FontCache/Font28MS_Reference_Sans_Serif_0.png;Gum/FontCache/Font28MS_Reference_Sans_Serif_0.png
+
+#begin ../Working/Gum/FontCache/Font28MS_Reference_Sans_Serif_Bold_0.png
+/copy:../Working/Gum/FontCache/Font28MS_Reference_Sans_Serif_Bold_0.png;Gum/FontCache/Font28MS_Reference_Sans_Serif_Bold_0.png
+
+#begin ../Working/Gum/FontCache/Font28MS_Reference_Sans_Serif_Bold.bmfc
+/copy:../Working/Gum/FontCache/Font28MS_Reference_Sans_Serif_Bold.bmfc;Gum/FontCache/Font28MS_Reference_Sans_Serif_Bold.bmfc
+
+#begin ../Working/Gum/FontCache/Font28MS_Reference_Sans_Serif_Bold.fnt
+/copy:../Working/Gum/FontCache/Font28MS_Reference_Sans_Serif_Bold.fnt;Gum/FontCache/Font28MS_Reference_Sans_Serif_Bold.fnt
+
+#begin ../Working/Gum/FontCache/Font28MS_Reference_Sans_Serif_noSmooth_Bold.bmfc
+/copy:../Working/Gum/FontCache/Font28MS_Reference_Sans_Serif_noSmooth_Bold.bmfc;Gum/FontCache/Font28MS_Reference_Sans_Serif_noSmooth_Bold.bmfc
+
+#begin ../Working/Gum/FontCache/Font28MS_Reference_Sans_Serif.bmfc
+/copy:../Working/Gum/FontCache/Font28MS_Reference_Sans_Serif.bmfc;Gum/FontCache/Font28MS_Reference_Sans_Serif.bmfc
+
+#begin ../Working/Gum/FontCache/Font28MS_Reference_Sans_Serif.fnt
+/copy:../Working/Gum/FontCache/Font28MS_Reference_Sans_Serif.fnt;Gum/FontCache/Font28MS_Reference_Sans_Serif.fnt
+
+#begin ../Working/Gum/FontCache/Font32Arial_0.png
+/copy:../Working/Gum/FontCache/Font32Arial_0.png;Gum/FontCache/Font32Arial_0.png
+
+#begin ../Working/Gum/FontCache/Font32Arial_Black_0.png
+/copy:../Working/Gum/FontCache/Font32Arial_Black_0.png;Gum/FontCache/Font32Arial_Black_0.png
+
+#begin ../Working/Gum/FontCache/Font32Arial_Black.bmfc
+/copy:../Working/Gum/FontCache/Font32Arial_Black.bmfc;Gum/FontCache/Font32Arial_Black.bmfc
+
+#begin ../Working/Gum/FontCache/Font32Arial_Black.fnt
+/copy:../Working/Gum/FontCache/Font32Arial_Black.fnt;Gum/FontCache/Font32Arial_Black.fnt
+
+#begin ../Working/Gum/FontCache/Font32Arial_Bold_0.png
+/copy:../Working/Gum/FontCache/Font32Arial_Bold_0.png;Gum/FontCache/Font32Arial_Bold_0.png
+
+#begin ../Working/Gum/FontCache/Font32Arial_Bold.bmfc
+/copy:../Working/Gum/FontCache/Font32Arial_Bold.bmfc;Gum/FontCache/Font32Arial_Bold.bmfc
+
+#begin ../Working/Gum/FontCache/Font32Arial_Bold.fnt
+/copy:../Working/Gum/FontCache/Font32Arial_Bold.fnt;Gum/FontCache/Font32Arial_Bold.fnt
+
+#begin ../Working/Gum/FontCache/Font32Arial_Narrow_0.png
+/copy:../Working/Gum/FontCache/Font32Arial_Narrow_0.png;Gum/FontCache/Font32Arial_Narrow_0.png
+
+#begin ../Working/Gum/FontCache/Font32Arial_Narrow.bmfc
+/copy:../Working/Gum/FontCache/Font32Arial_Narrow.bmfc;Gum/FontCache/Font32Arial_Narrow.bmfc
+
+#begin ../Working/Gum/FontCache/Font32Arial_Narrow.fnt
+/copy:../Working/Gum/FontCache/Font32Arial_Narrow.fnt;Gum/FontCache/Font32Arial_Narrow.fnt
+
+#begin ../Working/Gum/FontCache/Font32Arial_Unicode_MS_0.png
+/copy:../Working/Gum/FontCache/Font32Arial_Unicode_MS_0.png;Gum/FontCache/Font32Arial_Unicode_MS_0.png
+
+#begin ../Working/Gum/FontCache/Font32Arial_Unicode_MS.bmfc
+/copy:../Working/Gum/FontCache/Font32Arial_Unicode_MS.bmfc;Gum/FontCache/Font32Arial_Unicode_MS.bmfc
+
+#begin ../Working/Gum/FontCache/Font32Arial_Unicode_MS.fnt
+/copy:../Working/Gum/FontCache/Font32Arial_Unicode_MS.fnt;Gum/FontCache/Font32Arial_Unicode_MS.fnt
+
+#begin ../Working/Gum/FontCache/Font32Arial.bmfc
+/copy:../Working/Gum/FontCache/Font32Arial.bmfc;Gum/FontCache/Font32Arial.bmfc
+
+#begin ../Working/Gum/FontCache/Font32Arial.fnt
+/copy:../Working/Gum/FontCache/Font32Arial.fnt;Gum/FontCache/Font32Arial.fnt
+
+#begin ../Working/Gum/FontCache/Font32Bahnschrift_0.png
+/copy:../Working/Gum/FontCache/Font32Bahnschrift_0.png;Gum/FontCache/Font32Bahnschrift_0.png
+
+#begin ../Working/Gum/FontCache/Font32Bahnschrift.bmfc
+/copy:../Working/Gum/FontCache/Font32Bahnschrift.bmfc;Gum/FontCache/Font32Bahnschrift.bmfc
+
+#begin ../Working/Gum/FontCache/Font32Bahnschrift.fnt
+/copy:../Working/Gum/FontCache/Font32Bahnschrift.fnt;Gum/FontCache/Font32Bahnschrift.fnt
+
+#begin ../Working/Gum/FontCache/Font32Cambria_0.png
+/copy:../Working/Gum/FontCache/Font32Cambria_0.png;Gum/FontCache/Font32Cambria_0.png
+
+#begin ../Working/Gum/FontCache/Font32Cambria.bmfc
+/copy:../Working/Gum/FontCache/Font32Cambria.bmfc;Gum/FontCache/Font32Cambria.bmfc
+
+#begin ../Working/Gum/FontCache/Font32Cambria.fnt
+/copy:../Working/Gum/FontCache/Font32Cambria.fnt;Gum/FontCache/Font32Cambria.fnt
+
+#begin ../Working/Gum/FontCache/Font32Cascadia_Code_0.png
+/copy:../Working/Gum/FontCache/Font32Cascadia_Code_0.png;Gum/FontCache/Font32Cascadia_Code_0.png
+
+#begin ../Working/Gum/FontCache/Font32Cascadia_Code_ExtraLight_0.png
+/copy:../Working/Gum/FontCache/Font32Cascadia_Code_ExtraLight_0.png;Gum/FontCache/Font32Cascadia_Code_ExtraLight_0.png
+
+#begin ../Working/Gum/FontCache/Font32Cascadia_Code_ExtraLight.bmfc
+/copy:../Working/Gum/FontCache/Font32Cascadia_Code_ExtraLight.bmfc;Gum/FontCache/Font32Cascadia_Code_ExtraLight.bmfc
+
+#begin ../Working/Gum/FontCache/Font32Cascadia_Code_ExtraLight.fnt
+/copy:../Working/Gum/FontCache/Font32Cascadia_Code_ExtraLight.fnt;Gum/FontCache/Font32Cascadia_Code_ExtraLight.fnt
+
+#begin ../Working/Gum/FontCache/Font32Cascadia_Code_Light_0.png
+/copy:../Working/Gum/FontCache/Font32Cascadia_Code_Light_0.png;Gum/FontCache/Font32Cascadia_Code_Light_0.png
+
+#begin ../Working/Gum/FontCache/Font32Cascadia_Code_Light.bmfc
+/copy:../Working/Gum/FontCache/Font32Cascadia_Code_Light.bmfc;Gum/FontCache/Font32Cascadia_Code_Light.bmfc
+
+#begin ../Working/Gum/FontCache/Font32Cascadia_Code_Light.fnt
+/copy:../Working/Gum/FontCache/Font32Cascadia_Code_Light.fnt;Gum/FontCache/Font32Cascadia_Code_Light.fnt
+
+#begin ../Working/Gum/FontCache/Font32Cascadia_Code_SemiBold_0.png
+/copy:../Working/Gum/FontCache/Font32Cascadia_Code_SemiBold_0.png;Gum/FontCache/Font32Cascadia_Code_SemiBold_0.png
+
+#begin ../Working/Gum/FontCache/Font32Cascadia_Code_SemiBold.bmfc
+/copy:../Working/Gum/FontCache/Font32Cascadia_Code_SemiBold.bmfc;Gum/FontCache/Font32Cascadia_Code_SemiBold.bmfc
+
+#begin ../Working/Gum/FontCache/Font32Cascadia_Code_SemiBold.fnt
+/copy:../Working/Gum/FontCache/Font32Cascadia_Code_SemiBold.fnt;Gum/FontCache/Font32Cascadia_Code_SemiBold.fnt
+
+#begin ../Working/Gum/FontCache/Font32Cascadia_Code.bmfc
+/copy:../Working/Gum/FontCache/Font32Cascadia_Code.bmfc;Gum/FontCache/Font32Cascadia_Code.bmfc
+
+#begin ../Working/Gum/FontCache/Font32Cascadia_Code.fnt
+/copy:../Working/Gum/FontCache/Font32Cascadia_Code.fnt;Gum/FontCache/Font32Cascadia_Code.fnt
+
+#begin ../Working/Gum/FontCache/Font32Consolas_0.png
+/copy:../Working/Gum/FontCache/Font32Consolas_0.png;Gum/FontCache/Font32Consolas_0.png
+
+#begin ../Working/Gum/FontCache/Font32Consolas.bmfc
+/copy:../Working/Gum/FontCache/Font32Consolas.bmfc;Gum/FontCache/Font32Consolas.bmfc
+
+#begin ../Working/Gum/FontCache/Font32Consolas.fnt
+/copy:../Working/Gum/FontCache/Font32Consolas.fnt;Gum/FontCache/Font32Consolas.fnt
+
+#begin ../Working/Gum/FontCache/Font32Courier_New_0.png
+/copy:../Working/Gum/FontCache/Font32Courier_New_0.png;Gum/FontCache/Font32Courier_New_0.png
+
+#begin ../Working/Gum/FontCache/Font32Courier_New.bmfc
+/copy:../Working/Gum/FontCache/Font32Courier_New.bmfc;Gum/FontCache/Font32Courier_New.bmfc
+
+#begin ../Working/Gum/FontCache/Font32Courier_New.fnt
+/copy:../Working/Gum/FontCache/Font32Courier_New.fnt;Gum/FontCache/Font32Courier_New.fnt
+
+#begin ../Working/Gum/FontCache/Font32Georgia_0.png
+/copy:../Working/Gum/FontCache/Font32Georgia_0.png;Gum/FontCache/Font32Georgia_0.png
+
+#begin ../Working/Gum/FontCache/Font32Georgia.bmfc
+/copy:../Working/Gum/FontCache/Font32Georgia.bmfc;Gum/FontCache/Font32Georgia.bmfc
+
+#begin ../Working/Gum/FontCache/Font32Georgia.fnt
+/copy:../Working/Gum/FontCache/Font32Georgia.fnt;Gum/FontCache/Font32Georgia.fnt
+
+#begin ../Working/Gum/FontCache/Font32Microsoft_YaHei_UI_0.png
+/copy:../Working/Gum/FontCache/Font32Microsoft_YaHei_UI_0.png;Gum/FontCache/Font32Microsoft_YaHei_UI_0.png
+
+#begin ../Working/Gum/FontCache/Font32Microsoft_YaHei_UI_Light_0.png
+/copy:../Working/Gum/FontCache/Font32Microsoft_YaHei_UI_Light_0.png;Gum/FontCache/Font32Microsoft_YaHei_UI_Light_0.png
+
+#begin ../Working/Gum/FontCache/Font32Microsoft_YaHei_UI_Light.bmfc
+/copy:../Working/Gum/FontCache/Font32Microsoft_YaHei_UI_Light.bmfc;Gum/FontCache/Font32Microsoft_YaHei_UI_Light.bmfc
+
+#begin ../Working/Gum/FontCache/Font32Microsoft_YaHei_UI_Light.fnt
+/copy:../Working/Gum/FontCache/Font32Microsoft_YaHei_UI_Light.fnt;Gum/FontCache/Font32Microsoft_YaHei_UI_Light.fnt
+
+#begin ../Working/Gum/FontCache/Font32Microsoft_YaHei_UI.bmfc
+/copy:../Working/Gum/FontCache/Font32Microsoft_YaHei_UI.bmfc;Gum/FontCache/Font32Microsoft_YaHei_UI.bmfc
+
+#begin ../Working/Gum/FontCache/Font32Microsoft_YaHei_UI.fnt
+/copy:../Working/Gum/FontCache/Font32Microsoft_YaHei_UI.fnt;Gum/FontCache/Font32Microsoft_YaHei_UI.fnt
+
+#begin ../Working/Gum/FontCache/Font32Microsoft_Yi_Baiti_0.png
+/copy:../Working/Gum/FontCache/Font32Microsoft_Yi_Baiti_0.png;Gum/FontCache/Font32Microsoft_Yi_Baiti_0.png
+
+#begin ../Working/Gum/FontCache/Font32Microsoft_Yi_Baiti.bmfc
+/copy:../Working/Gum/FontCache/Font32Microsoft_Yi_Baiti.bmfc;Gum/FontCache/Font32Microsoft_Yi_Baiti.bmfc
+
+#begin ../Working/Gum/FontCache/Font32Microsoft_Yi_Baiti.fnt
+/copy:../Working/Gum/FontCache/Font32Microsoft_Yi_Baiti.fnt;Gum/FontCache/Font32Microsoft_Yi_Baiti.fnt
+
+#begin ../Working/Gum/FontCache/Font32MS_Reference_Sans_Serif_0.png
+/copy:../Working/Gum/FontCache/Font32MS_Reference_Sans_Serif_0.png;Gum/FontCache/Font32MS_Reference_Sans_Serif_0.png
+
+#begin ../Working/Gum/FontCache/Font32MS_Reference_Sans_Serif.bmfc
+/copy:../Working/Gum/FontCache/Font32MS_Reference_Sans_Serif.bmfc;Gum/FontCache/Font32MS_Reference_Sans_Serif.bmfc
+
+#begin ../Working/Gum/FontCache/Font32MS_Reference_Sans_Serif.fnt
+/copy:../Working/Gum/FontCache/Font32MS_Reference_Sans_Serif.fnt;Gum/FontCache/Font32MS_Reference_Sans_Serif.fnt
+
+#begin ../Working/Gum/FontCache/Font38Arial_Bold_0.png
+/copy:../Working/Gum/FontCache/Font38Arial_Bold_0.png;Gum/FontCache/Font38Arial_Bold_0.png
+
+#begin ../Working/Gum/FontCache/Font38Arial_Bold.bmfc
+/copy:../Working/Gum/FontCache/Font38Arial_Bold.bmfc;Gum/FontCache/Font38Arial_Bold.bmfc
+
+#begin ../Working/Gum/FontCache/Font38Arial_Bold.fnt
+/copy:../Working/Gum/FontCache/Font38Arial_Bold.fnt;Gum/FontCache/Font38Arial_Bold.fnt
+
+#begin ../Working/Gum/FontCache/Font48Arial_Bold_0.png
+/copy:../Working/Gum/FontCache/Font48Arial_Bold_0.png;Gum/FontCache/Font48Arial_Bold_0.png
+
+#begin ../Working/Gum/FontCache/Font48Arial_Bold.bmfc
+/copy:../Working/Gum/FontCache/Font48Arial_Bold.bmfc;Gum/FontCache/Font48Arial_Bold.bmfc
+
+#begin ../Working/Gum/FontCache/Font48Arial_Bold.fnt
+/copy:../Working/Gum/FontCache/Font48Arial_Bold.fnt;Gum/FontCache/Font48Arial_Bold.fnt
+
+#begin ../Working/Gum/FontCache/Font48Arial_noSmooth_Bold_0.png
+/copy:../Working/Gum/FontCache/Font48Arial_noSmooth_Bold_0.png;Gum/FontCache/Font48Arial_noSmooth_Bold_0.png
+
+#begin ../Working/Gum/FontCache/Font48Arial_noSmooth_Bold.bmfc
+/copy:../Working/Gum/FontCache/Font48Arial_noSmooth_Bold.bmfc;Gum/FontCache/Font48Arial_noSmooth_Bold.bmfc
+
+#begin ../Working/Gum/FontCache/Font48Arial_noSmooth_Bold.fnt
+/copy:../Working/Gum/FontCache/Font48Arial_noSmooth_Bold.fnt;Gum/FontCache/Font48Arial_noSmooth_Bold.fnt
+
+#begin ../Working/Gum/FontCache/Font48MS_Reference_Sans_Serif_Bold_0.png
+/copy:../Working/Gum/FontCache/Font48MS_Reference_Sans_Serif_Bold_0.png;Gum/FontCache/Font48MS_Reference_Sans_Serif_Bold_0.png
+
+#begin ../Working/Gum/FontCache/Font48MS_Reference_Sans_Serif_Bold.bmfc
+/copy:../Working/Gum/FontCache/Font48MS_Reference_Sans_Serif_Bold.bmfc;Gum/FontCache/Font48MS_Reference_Sans_Serif_Bold.bmfc
+
+#begin ../Working/Gum/FontCache/Font48MS_Reference_Sans_Serif_Bold.fnt
+/copy:../Working/Gum/FontCache/Font48MS_Reference_Sans_Serif_Bold.fnt;Gum/FontCache/Font48MS_Reference_Sans_Serif_Bold.fnt
+
+#begin ../Working/Gum/FontCache/Font48MS_Reference_Sans_Serif_noSmooth_Bold_0.png
+/copy:../Working/Gum/FontCache/Font48MS_Reference_Sans_Serif_noSmooth_Bold_0.png;Gum/FontCache/Font48MS_Reference_Sans_Serif_noSmooth_Bold_0.png
+
+#begin ../Working/Gum/FontCache/Font48MS_Reference_Sans_Serif_noSmooth_Bold.bmfc
+/copy:../Working/Gum/FontCache/Font48MS_Reference_Sans_Serif_noSmooth_Bold.bmfc;Gum/FontCache/Font48MS_Reference_Sans_Serif_noSmooth_Bold.bmfc
+
+#begin ../Working/Gum/FontCache/Font48MS_Reference_Sans_Serif_noSmooth_Bold.fnt
+/copy:../Working/Gum/FontCache/Font48MS_Reference_Sans_Serif_noSmooth_Bold.fnt;Gum/FontCache/Font48MS_Reference_Sans_Serif_noSmooth_Bold.fnt
+
+#begin ../Working/Gum/FontCache/Font50Arial_Bold_0.png
+/copy:../Working/Gum/FontCache/Font50Arial_Bold_0.png;Gum/FontCache/Font50Arial_Bold_0.png
+
+#begin ../Working/Gum/FontCache/Font50Arial_Bold.bmfc
+/copy:../Working/Gum/FontCache/Font50Arial_Bold.bmfc;Gum/FontCache/Font50Arial_Bold.bmfc
+
+#begin ../Working/Gum/FontCache/Font50Arial_Bold.fnt
+/copy:../Working/Gum/FontCache/Font50Arial_Bold.fnt;Gum/FontCache/Font50Arial_Bold.fnt
+
+#begin ../Working/Gum/FontCache/Font55Arial_Bold_0.png
+/copy:../Working/Gum/FontCache/Font55Arial_Bold_0.png;Gum/FontCache/Font55Arial_Bold_0.png
+
+#begin ../Working/Gum/FontCache/Font55Arial_Bold.bmfc
+/copy:../Working/Gum/FontCache/Font55Arial_Bold.bmfc;Gum/FontCache/Font55Arial_Bold.bmfc
+
+#begin ../Working/Gum/FontCache/Font55Arial_Bold.fnt
+/copy:../Working/Gum/FontCache/Font55Arial_Bold.fnt;Gum/FontCache/Font55Arial_Bold.fnt
+
+#begin ../Working/Gum/FontCache/Font64Arial_Bold_0.png
+/copy:../Working/Gum/FontCache/Font64Arial_Bold_0.png;Gum/FontCache/Font64Arial_Bold_0.png
+
+#begin ../Working/Gum/FontCache/Font64Arial_Bold.bmfc
+/copy:../Working/Gum/FontCache/Font64Arial_Bold.bmfc;Gum/FontCache/Font64Arial_Bold.bmfc
+
+#begin ../Working/Gum/FontCache/Font64Arial_Bold.fnt
+/copy:../Working/Gum/FontCache/Font64Arial_Bold.fnt;Gum/FontCache/Font64Arial_Bold.fnt
+
+#begin ../Working/Gum/FontCache/Font80Arial_0.png
+/copy:../Working/Gum/FontCache/Font80Arial_0.png;Gum/FontCache/Font80Arial_0.png
+
+#begin ../Working/Gum/FontCache/Font80Arial.bmfc
+/copy:../Working/Gum/FontCache/Font80Arial.bmfc;Gum/FontCache/Font80Arial.bmfc
+
+#begin ../Working/Gum/FontCache/Font80Arial.fnt
+/copy:../Working/Gum/FontCache/Font80Arial.fnt;Gum/FontCache/Font80Arial.fnt
+
+#begin ../Working/Gum/Fonts/def.bmfc
+/copy:../Working/Gum/Fonts/def.bmfc;Gum/Fonts/def.bmfc
+
+#begin ../Working/Gum/Fonts/default.ttf
+/copy:../Working/Gum/Fonts/default.ttf;Gum/Fonts/default.ttf
+
+#begin ../Working/Gum/Fonts/default18_0.png
+/copy:../Working/Gum/Fonts/default18_0.png;Gum/Fonts/default18_0.png
+
+#begin ../Working/Gum/Fonts/default18.fnt
+/copy:../Working/Gum/Fonts/default18.fnt;Gum/Fonts/default18.fnt
+
+#begin ../Working/Gum/Fonts/default24_0.png
+/copy:../Working/Gum/Fonts/default24_0.png;Gum/Fonts/default24_0.png
+
+#begin ../Working/Gum/Fonts/default24_1.png
+/copy:../Working/Gum/Fonts/default24_1.png;Gum/Fonts/default24_1.png
+
+#begin ../Working/Gum/Fonts/default24.fnt
+/copy:../Working/Gum/Fonts/default24.fnt;Gum/Fonts/default24.fnt
+
+#begin ../Working/Gum/Fonts/default32_0.png
+/copy:../Working/Gum/Fonts/default32_0.png;Gum/Fonts/default32_0.png
+
+#begin ../Working/Gum/Fonts/default32_1.png
+/copy:../Working/Gum/Fonts/default32_1.png;Gum/Fonts/default32_1.png
+
+#begin ../Working/Gum/Fonts/default32_2.png
+/copy:../Working/Gum/Fonts/default32_2.png;Gum/Fonts/default32_2.png
+
+#begin ../Working/Gum/Fonts/default32.fnt
+/copy:../Working/Gum/Fonts/default32.fnt;Gum/Fonts/default32.fnt
+
+#begin ../Working/Gum/Fonts/default48_0.png
+/copy:../Working/Gum/Fonts/default48_0.png;Gum/Fonts/default48_0.png
+
+#begin ../Working/Gum/Fonts/default48_1.png
+/copy:../Working/Gum/Fonts/default48_1.png;Gum/Fonts/default48_1.png
+
+#begin ../Working/Gum/Fonts/default48_2.png
+/copy:../Working/Gum/Fonts/default48_2.png;Gum/Fonts/default48_2.png
+
+#begin ../Working/Gum/Fonts/default48_3.png
+/copy:../Working/Gum/Fonts/default48_3.png;Gum/Fonts/default48_3.png
+
+#begin ../Working/Gum/Fonts/default48_4.png
+/copy:../Working/Gum/Fonts/default48_4.png;Gum/Fonts/default48_4.png
+
+#begin ../Working/Gum/Fonts/default48.fnt
+/copy:../Working/Gum/Fonts/default48.fnt;Gum/Fonts/default48.fnt
+
+#begin ../Working/Gum/gumproj.gumx
+/copy:../Working/Gum/gumproj.gumx;Gum/gumproj.gumx
+
+#begin ../Working/Gum/ProjectCodeSettings.codsj
+/copy:../Working/Gum/ProjectCodeSettings.codsj;Gum/ProjectCodeSettings.codsj
+
+#begin ../Working/Gum/Screens/DemoScreenGum.gusx
+/copy:../Working/Gum/Screens/DemoScreenGum.gusx;Gum/Screens/DemoScreenGum.gusx
+
+#begin ../Working/Gum/Screens/Menu.gusx
+/copy:../Working/Gum/Screens/Menu.gusx;Gum/Screens/Menu.gusx
+
+#begin ../Working/Gum/Screens/MenuAnimations.ganx
+/copy:../Working/Gum/Screens/MenuAnimations.ganx;Gum/Screens/MenuAnimations.ganx
+
+#begin ../Working/Gum/Standards/Circle.gutx
+/copy:../Working/Gum/Standards/Circle.gutx;Gum/Standards/Circle.gutx
+
+#begin ../Working/Gum/Standards/ColoredRectangle.gutx
+/copy:../Working/Gum/Standards/ColoredRectangle.gutx;Gum/Standards/ColoredRectangle.gutx
+
+#begin ../Working/Gum/Standards/Component.gutx
+/copy:../Working/Gum/Standards/Component.gutx;Gum/Standards/Component.gutx
+
+#begin ../Working/Gum/Standards/Container.gutx
+/copy:../Working/Gum/Standards/Container.gutx;Gum/Standards/Container.gutx
+
+#begin ../Working/Gum/Standards/NineSlice.gutx
+/copy:../Working/Gum/Standards/NineSlice.gutx;Gum/Standards/NineSlice.gutx
+
+#begin ../Working/Gum/Standards/Polygon.gutx
+/copy:../Working/Gum/Standards/Polygon.gutx;Gum/Standards/Polygon.gutx
+
+#begin ../Working/Gum/Standards/Rectangle.gutx
+/copy:../Working/Gum/Standards/Rectangle.gutx;Gum/Standards/Rectangle.gutx
+
+#begin ../Working/Gum/Standards/Sprite.gutx
+/copy:../Working/Gum/Standards/Sprite.gutx;Gum/Standards/Sprite.gutx
+
+#begin ../Working/Gum/Standards/Text.gutx
+/copy:../Working/Gum/Standards/Text.gutx;Gum/Standards/Text.gutx
+
+#begin ../Working/Gum/UISpriteSheet.png
+/copy:../Working/Gum/UISpriteSheet.png;Gum/UISpriteSheet.png
+
+#begin ../Working/Materials/developer/devgreen.cmt
+/copy:../Working/Materials/developer/devgreen.cmt;Materials/developer/devgreen.cmt
+
+#begin ../Working/Materials/developer/devgrey.cmt
+/copy:../Working/Materials/developer/devgrey.cmt;Materials/developer/devgrey.cmt
+
+#begin ../Working/Materials/developer/devorange.cmt
+/copy:../Working/Materials/developer/devorange.cmt;Materials/developer/devorange.cmt
+
+#begin ../Working/Materials/developer/devwhite.cmt
+/copy:../Working/Materials/developer/devwhite.cmt;Materials/developer/devwhite.cmt
+
+#begin ../Working/Materials/tools/tool_clip.cmt
+/copy:../Working/Materials/tools/tool_clip.cmt;Materials/tools/tool_clip.cmt
+
+#begin ../Working/Materials/tools/tool_nodraw.cmt
+/copy:../Working/Materials/tools/tool_nodraw.cmt;Materials/tools/tool_nodraw.cmt
+
+#begin ../Working/Materials/tools/tool_skybox.cmt
+/copy:../Working/Materials/tools/tool_skybox.cmt;Materials/tools/tool_skybox.cmt
+
+#begin ../Working/Materials/tools/tool_trigger.cmt
+/copy:../Working/Materials/tools/tool_trigger.cmt;Materials/tools/tool_trigger.cmt
+
+#begin ../Working/Textures/dev/devgreen.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=False
+/processorParam:GenerateMipmaps=True
+/processorParam:PremultiplyAlpha=False
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../Working/Textures/dev/devgreen.png;Textures/dev/devgreen.png
+
+#begin ../Working/Textures/dev/devgrey.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=False
+/processorParam:GenerateMipmaps=True
+/processorParam:PremultiplyAlpha=False
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../Working/Textures/dev/devgrey.png;Textures/dev/devgrey.png
+
+#begin ../Working/Textures/dev/devorange.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=False
+/processorParam:GenerateMipmaps=True
+/processorParam:PremultiplyAlpha=False
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../Working/Textures/dev/devorange.png;Textures/dev/devorange.png
+
+#begin ../Working/Textures/dev/devwhite.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=False
+/processorParam:GenerateMipmaps=True
+/processorParam:PremultiplyAlpha=False
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../Working/Textures/dev/devwhite.png;Textures/dev/devwhite.png
+
+#begin ../Working/Textures/tools/tool_clip.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=False
+/processorParam:GenerateMipmaps=True
+/processorParam:PremultiplyAlpha=False
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../Working/Textures/tools/tool_clip.png;Textures/tools/tool_clip.png
+
+#begin ../Working/Textures/tools/tool_lightnodevolume.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=False
+/processorParam:GenerateMipmaps=True
+/processorParam:PremultiplyAlpha=False
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../Working/Textures/tools/tool_lightnodevolume.png;Textures/tools/tool_lightnodevolume.png
+
+#begin ../Working/Textures/tools/tool_nodraw.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=False
+/processorParam:GenerateMipmaps=True
+/processorParam:PremultiplyAlpha=False
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../Working/Textures/tools/tool_nodraw.png;Textures/tools/tool_nodraw.png
+
+#begin ../Working/Textures/tools/tool_skybox.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=False
+/processorParam:GenerateMipmaps=True
+/processorParam:PremultiplyAlpha=False
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../Working/Textures/tools/tool_skybox.png;Textures/tools/tool_skybox.png
+
+#begin ../Working/Textures/tools/tool_trigger.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=False
+/processorParam:GenerateMipmaps=True
+/processorParam:PremultiplyAlpha=False
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../Working/Textures/tools/tool_trigger.png;Textures/tools/tool_trigger.png
+
+#begin ../Working/UI/cguibutton_down.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=False
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=False
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../Working/UI/cguibutton_down.png;UI/cguibutton_down.png
+
+#begin ../Working/UI/cguibutton_up.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=False
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=False
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../Working/UI/cguibutton_up.png;UI/cguibutton_up.png
+
+#begin ../Working/UI/cguiinput.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=False
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=False
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../Working/UI/cguiinput.png;UI/cguiinput.png
+
+#begin ../Working/UI/cguipanel.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=False
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=False
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../Working/UI/cguipanel.png;UI/cguipanel.png
+
+#begin ../Working/UI/cguirect.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=False
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=False
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../Working/UI/cguirect.png;UI/cguirect.png
+
+#begin ../Working/UI/Cursors/Arrow.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=False
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=False
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../Working/UI/Cursors/Arrow.png;UI/Cursors/Arrow.png
+
+#begin ../Working/UI/Cursors/Link.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=False
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=False
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../Working/UI/Cursors/Link.png;UI/Cursors/Link.png
+
+#begin ../Working/UI/Cursors/Move.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=False
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=False
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../Working/UI/Cursors/Move.png;UI/Cursors/Move.png
+
+#begin ../Working/UI/Cursors/Select.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=False
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=False
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../Working/UI/Cursors/Select.png;UI/Cursors/Select.png
+
+#begin ../Working/UI/Cursors/SizeNESW.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=False
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=False
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../Working/UI/Cursors/SizeNESW.png;UI/Cursors/SizeNESW.png
+
+#begin ../Working/UI/Cursors/SizeNS.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=False
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=False
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../Working/UI/Cursors/SizeNS.png;UI/Cursors/SizeNS.png
+
+#begin ../Working/UI/Cursors/SizeNWSE.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=False
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=False
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../Working/UI/Cursors/SizeNWSE.png;UI/Cursors/SizeNWSE.png
+
+#begin ../Working/UI/Cursors/SizeWE.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=False
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=False
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../Working/UI/Cursors/SizeWE.png;UI/Cursors/SizeWE.png
+
+#begin ../Working/Textures/dev/devnormal.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=False
+/processorParam:GenerateMipmaps=True
+/processorParam:PremultiplyAlpha=False
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../Working/Textures/dev/devnormal.png;Textures/dev/devnormal.png
+
+#begin ../Working/Shaders/PostFXQuad.vert
+/copy:../Working/Shaders/PostFXQuad.vert;Shaders/PostFXQuad.vert
+
+#begin ../Working/Shaders/AdaptExposure/AdaptExposure.frag
+/copy:../Working/Shaders/AdaptExposure/AdaptExposure.frag;Shaders/AdaptExposure/AdaptExposure.frag
+
+#begin ../Working/Shaders/AdaptExposure/AdaptExposure.csh
+/copy:../Working/Shaders/AdaptExposure/AdaptExposure.csh;Shaders/AdaptExposure/AdaptExposure.csh
+
+#begin ../Working/Shaders/BloomDownsample/BloomPrefilter.frag
+/copy:../Working/Shaders/BloomDownsample/BloomPrefilter.frag;Shaders/BloomDownsample/BloomPrefilter.frag
+
+#begin ../Working/Shaders/BloomDownsample/BoxDownsample.frag
+/copy:../Working/Shaders/BloomDownsample/BoxDownsample.frag;Shaders/BloomDownsample/BoxDownsample.frag
+
+#begin ../Working/Shaders/BloomDownsample/BloomDownsample.csh
+/copy:../Working/Shaders/BloomDownsample/BloomDownsample.csh;Shaders/BloomDownsample/BloomDownsample.csh
+
+#begin ../Working/Shaders/BloomUpsample/BloomUpsample.frag
+/copy:../Working/Shaders/BloomUpsample/BloomUpsample.frag;Shaders/BloomUpsample/BloomUpsample.frag
+
+#begin ../Working/Shaders/BloomUpsample/BloomUpsample.csh
+/copy:../Working/Shaders/BloomUpsample/BloomUpsample.csh;Shaders/BloomUpsample/BloomUpsample.csh
+
+#begin ../Working/Shaders/LuminanceDownsample/LuminanceDownsample.frag
+/copy:../Working/Shaders/LuminanceDownsample/LuminanceDownsample.frag;Shaders/LuminanceDownsample/LuminanceDownsample.frag
+
+#begin ../Working/Shaders/LuminanceDownsample/LuminanceFinalReduce.frag
+/copy:../Working/Shaders/LuminanceDownsample/LuminanceFinalReduce.frag;Shaders/LuminanceDownsample/LuminanceFinalReduce.frag
+
+#begin ../Working/Shaders/LuminanceDownsample/LuminanceDownsample.csh
+/copy:../Working/Shaders/LuminanceDownsample/LuminanceDownsample.csh;Shaders/LuminanceDownsample/LuminanceDownsample.csh
+
+#begin ../Working/Shaders/LuminanceInitial/LuminanceInitial.csh
+/copy:../Working/Shaders/LuminanceInitial/LuminanceInitial.csh;Shaders/LuminanceInitial/LuminanceInitial.csh
+
+#begin ../Working/Shaders/LuminanceInitial/LuminanceInitial.frag
+/copy:../Working/Shaders/LuminanceInitial/LuminanceInitial.frag;Shaders/LuminanceInitial/LuminanceInitial.frag
+
+#begin ../Working/Shaders/PostProcessing/PostProcessing.frag
+/copy:../Working/Shaders/PostProcessing/PostProcessing.frag;Shaders/PostProcessing/PostProcessing.frag
+
+#begin ../Working/Shaders/PostProcessing/PostProcessing.csh
+/copy:../Working/Shaders/PostProcessing/PostProcessing.csh;Shaders/PostProcessing/PostProcessing.csh
+
+#begin ../Working/Shaders/BloomDownsample/BloomCommon.glsl
+/copy:../Working/Shaders/BloomDownsample/BloomCommon.glsl;Shaders/BloomDownsample/BloomCommon.glsl
+
+#begin ../Working/Textures/dev/devlightgrey.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=False
+/processorParam:GenerateMipmaps=True
+/processorParam:PremultiplyAlpha=False
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../Working/Textures/dev/devlightgrey.png;Textures/dev/devlightgrey.png
+
+#begin ../Working/Textures/dev/devblue.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=False
+/processorParam:GenerateMipmaps=True
+/processorParam:PremultiplyAlpha=False
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../Working/Textures/dev/devblue.png;Textures/dev/devblue.png
+
+#begin ../Working/Textures/dev/devred.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=False
+/processorParam:GenerateMipmaps=True
+/processorParam:PremultiplyAlpha=False
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../Working/Textures/dev/devred.png;Textures/dev/devred.png
+
+#begin ../Working/Materials/developer/devlightgrey.cmt
+/copy:../Working/Materials/developer/devlightgrey.cmt;Materials/developer/devlightgrey.cmt
+
+#begin ../Working/Materials/developer/devblue.cmt
+/copy:../Working/Materials/developer/devblue.cmt;Materials/developer/devblue.cmt
+
+#begin ../Working/Materials/developer/devred.cmt
+/copy:../Working/Materials/developer/devred.cmt;Materials/developer/devred.cmt
+
+#begin ../Working/Scripts/soundscape/empty.txt
+/copy:../Working/Scripts/soundscape/empty.txt;Scripts/soundscape/empty.txt
+
+#begin ../Working/Scripts/sound/empty.txt
+/copy:../Working/Scripts/sound/empty.txt;Scripts/sound/empty.txt
+
+#begin ../Working/Textures/splash_screen.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=False
+/processorParam:GenerateMipmaps=True
+/processorParam:PremultiplyAlpha=False
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../Working/Textures/splash_screen.png;Textures/splash_screen.png
+
+#begin ../Working/Textures/blobShadow.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=False
+/processorParam:GenerateMipmaps=True
+/processorParam:PremultiplyAlpha=False
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../Working/Textures/blobShadow.png;Textures/blobShadow.png

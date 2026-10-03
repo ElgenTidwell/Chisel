@@ -7,7 +7,7 @@ layout(rgba16f, binding = 1) uniform readonly image2D gNormal;
 layout(std430, binding = 21) buffer LayerB1Buffer { vec4 lmB1[]; };
 layout(std430, binding = 22) buffer LayerB2Buffer { vec4 lmB2[]; };
 layout(std430, binding = 23) buffer LayerB3Buffer { vec4 lmB3[]; };
-layout(std430, binding = 44) readonly buffer AOResultBuffer { float aoResult[]; };
+layout(std430, binding = 14) readonly buffer AOResultBuffer { float aoResult[]; };
 
 uniform int rowStart;
 uniform int blurRadius;

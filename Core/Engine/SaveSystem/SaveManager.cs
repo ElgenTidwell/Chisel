@@ -306,6 +306,10 @@ namespace Engine.SaveSystem
         /// </summary>
         public static IEnumerable<string> GetAllSaves()
         {
+            // thanks to @ratchet3789 and @bitl for randomly finding this
+            if (!Path.Exists(savePath))
+                Directory.CreateDirectory(savePath);
+
             var files = Directory.EnumerateFiles(savePath);
             return files;
         }

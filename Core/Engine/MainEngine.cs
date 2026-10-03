@@ -64,6 +64,8 @@ namespace Engine
             get; protected set;
         }
 
+        private static InputBinding consoleKey = new InputBinding("engine_console","Open Console","Debug",new BoundKey() { Key = Keys.OemTilde});
+
         internal static Queue<CommandBinding> commands = new Queue<CommandBinding>();
         internal static bool commandsDirty = true;
         public static FixedList<Vector3> DebugDrawPositions = new FixedList<Vector3>(512,true);
@@ -157,6 +159,10 @@ namespace Engine
         });
         public readonly static CommandBinding cMapchange = new CommandBinding("map", (string[] arg) =>
         {
+            if (arg == null) return;
+            if (arg.Length == 0) return;
+            if (string.IsNullOrEmpty(arg[0])) return;
+
             SaveManager.ClearSessionMapStates();
             if (arg[0] == "unload")
             {
@@ -550,7 +556,7 @@ namespace Engine
 
                 if (PauseWhenMenusOpen)
                 {
-                    if (KeyboardManager.HasBeenPressed(Keys.OemTilde))
+                    if (consoleKey.HasBeenPressed())
                     {
                         IsPaused = !IsPaused;
                         IsConsoleOpen = IsPaused;
@@ -559,7 +565,7 @@ namespace Engine
                 }
                 else
                 {
-                    if (KeyboardManager.HasBeenPressed(Keys.OemTilde))
+                    if (consoleKey.HasBeenPressed())
                     {
                         IsConsoleOpen = !IsConsoleOpen;
                     }

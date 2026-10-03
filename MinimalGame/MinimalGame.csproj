@@ -24,6 +24,10 @@
     <ProjectReference Include="..\Core\Engine\Engine.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Working\Maps\" />
+  </ItemGroup>
+
 	<PropertyGroup>
 		<MonoGamePlatform>DesktopGL</MonoGamePlatform>
 	</PropertyGroup>

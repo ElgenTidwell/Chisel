@@ -161,6 +161,7 @@ public class GameEngine : MainEngine
             if (!isActivelyPlaying)
             {
                 // Start a new game. Here you would load a map.
+                LoadMap($"{FullPath}/Maps/empty");
             }
             else
             {

@@ -50,6 +50,8 @@ public class CameraDirector : WorldEntity
         {
             control = (bool)entity.ReadProperty("Start With Control", Rockwall.EntityPropertyType.Bool);
             priority = (int)(float)entity.ReadProperty("Camera Priority", Rockwall.EntityPropertyType.Float);
+
+            base.OnSpawn();
         }
 
         public override void OnAllEntitiesSpawned()

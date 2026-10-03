@@ -10,9 +10,9 @@ layout(rgba16f, binding = 4) uniform readonly image2D gBasis3;
 layout(std430, binding = 10) readonly buffer PatchesBuffer { GpuPatch patches[]; };
 layout(std430, binding = 18) readonly buffer TexelHomePatchBuffer { int texelHomePatch[]; };
 layout(std430, binding = 31) readonly buffer PatchFinalValuesBuffer { vec4 patchValues[]; };
-layout(std430, binding = 48) readonly buffer NeighborCountBuffer { int neighborCount[]; };
-layout(std430, binding = 49) readonly buffer NeighborIndicesBuffer { int neighborIndices[]; };
-layout(std430, binding = 51) readonly buffer NeighborVisibilityBuffer { float neighborVisibility[]; };
+layout(std430, binding = 19) readonly buffer NeighborCountBuffer { int neighborCount[]; };
+layout(std430, binding = 20) readonly buffer NeighborIndicesBuffer { int neighborIndices[]; };
+layout(std430, binding = 30) readonly buffer NeighborVisibilityBuffer { float neighborVisibility[]; };
 
 layout(std430, binding = 21) buffer LayerB1Buffer { vec4 lmB1[]; };
 layout(std430, binding = 22) buffer LayerB2Buffer { vec4 lmB2[]; };

@@ -1,0 +1,1 @@
+﻿This folder is where you place entities. The working folder is purely for game assets.

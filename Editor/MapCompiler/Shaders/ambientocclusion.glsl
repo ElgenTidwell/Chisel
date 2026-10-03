@@ -6,7 +6,7 @@ layout(rgba16f, binding = 1) uniform readonly image2D gNormal;
 
 layout(std430, binding = 8) readonly buffer TexelSourceBrushBuffer { int texelSourceBrush[]; };
 layout(std430, binding = 9) readonly buffer TexelEntityGroupBuffer { int texelEntityGroup[]; };
-layout(std430, binding = 44) buffer AOResultBuffer { float aoResult[]; };
+layout(std430, binding = 14) buffer AOResultBuffer { float aoResult[]; };
 
 uniform int rowStart;
 uniform int sampleCount;

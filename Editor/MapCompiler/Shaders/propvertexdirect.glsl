@@ -2,9 +2,9 @@
 layout(local_size_x = 8) in;
 
 layout(std430, binding = 0) readonly buffer LightsBuffer { GpuLight lights[]; };
-layout(std430, binding = 56) readonly buffer VertPositionsBuffer { float vertPosFlat[]; };
-layout(std430, binding = 57) readonly buffer VertNormalsBuffer { float vertNormalFlat[]; };
-layout(std430, binding = 58) buffer VertDirectOutBuffer { vec4 directOut[]; };
+layout(std430, binding = 11) readonly buffer VertPositionsBuffer { float vertPosFlat[]; };
+layout(std430, binding = 12) readonly buffer VertNormalsBuffer { float vertNormalFlat[]; };
+layout(std430, binding = 13) buffer VertDirectOutBuffer { vec4 directOut[]; };
 
 uniform int vertCount;
 uniform int vertOffset;

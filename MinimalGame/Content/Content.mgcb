@@ -1557,3 +1557,9 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:../Working/Textures/base/basicSpecular.png;Textures/base/basicSpecular.png
+
+#begin ../Working/Maps/empty.cmap
+/copy:../Working/Maps/empty.cmap;Maps/empty.cmap
+
+#begin ../Working/Maps/empty.clm
+/copy:../Working/Maps/empty.clm;Maps/empty.clm

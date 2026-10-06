@@ -64,7 +64,7 @@ namespace Engine
             get; protected set;
         }
 
-        private static InputBinding consoleKey = new InputBinding("engine_console","Open Console","Debug",new BoundKey() { Key = Keys.OemTilde});
+        private static InputBinding consoleKey = new InputBinding("engine_console","Open Console","Debug",new BoundKey() { Key = Keys.OemTilde}, ignorePause:true);
 
         internal static Queue<CommandBinding> commands = new Queue<CommandBinding>();
         internal static bool commandsDirty = true;

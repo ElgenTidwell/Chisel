@@ -108,18 +108,15 @@ public static class GBufferRasterBuilder
             (current, scratch) = (scratch, current);
         }
 
-        var texelSourceBrush = new GpuBuffer(gl);
-        texelSourceBrush.Upload<int>(new int[resolution * resolution]);
-        var texelEntityGroup = new GpuBuffer(gl);
-        texelEntityGroup.Upload<int>(new int[resolution * resolution]);
+        var texelOwner = new GpuBuffer(gl);
+        texelOwner.Upload<int>(new int[resolution * resolution * 2]);
 
         using (var packProgram = new ComputeProgram(gl, "GBufferPack.glsl"))
         {
             packProgram.Use();
             current[5].BindImage(0, readOnly: true);
             current[6].BindImage(1, readOnly: true);
-            texelSourceBrush.BindBase(GpuBindings.TexelSourceBrush);
-            texelEntityGroup.BindBase(GpuBindings.TexelEntityGroup);
+            texelOwner.BindBase(GpuBindings.TexelOwner);
 
             packProgram.Dispatch(groups, groups);
             gl.MemoryBarrier(MemoryBarrierMask.ShaderStorageBarrierBit);
@@ -129,6 +126,6 @@ public static class GBufferRasterBuilder
         current[6].Dispose();
         foreach (var tex in scratch) tex.Dispose();
 
-        return GBufferResources.FromRaster(current[0], current[1], current[2], current[3], current[4], texelSourceBrush, texelEntityGroup);
+        return GBufferResources.FromRaster(current[0], current[1], current[2], current[3], current[4], texelOwner);
     }
 }

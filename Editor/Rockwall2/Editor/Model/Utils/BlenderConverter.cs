@@ -120,6 +120,7 @@ public static class BlenderConverter
     private static void RunBlender(string blenderExe, string blendPath, string scriptPath, bool showWindow)
     {
         ProcessStartInfo psi;
+        showWindow &= OperatingSystem.IsWindows();
 
         if (showWindow)
         {

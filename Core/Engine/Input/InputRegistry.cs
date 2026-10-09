@@ -43,7 +43,6 @@ public static class InputRegistry
 
         File.WriteAllText(savePath, JsonConvert.SerializeObject(data, Formatting.Indented));
     }
-
     public static void Load()
     {
         if (!File.Exists(savePath)) return;

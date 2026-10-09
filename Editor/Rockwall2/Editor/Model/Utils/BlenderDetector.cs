@@ -19,6 +19,7 @@ public static class BlenderDetector
         BlenderExePath =
             TryRegistry()
             ?? TryKnownPaths()
+            ?? TryPath()
             ?? TrySteam()
             ?? null;
     }
@@ -123,6 +124,20 @@ public static class BlenderDetector
             }
         }
         catch { }
+        return null;
+    }
+    private static string TryPath()
+    {
+        var pathVar = Environment.GetEnvironmentVariable("PATH");
+        if (string.IsNullOrEmpty(pathVar)) return null;
+
+        string exeName = OperatingSystem.IsWindows() ? "blender.exe" : "blender";
+
+        foreach (var dir in pathVar.Split(Path.PathSeparator, StringSplitOptions.RemoveEmptyEntries))
+        {
+            var exe = Path.Combine(dir, exeName);
+            if (File.Exists(exe)) return exe;
+        }
         return null;
     }
 }

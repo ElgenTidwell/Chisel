@@ -1,10 +1,10 @@
 #version 430
 layout(local_size_x = 8) in;
 
-layout(std430, binding = 18) readonly buffer TexelHomePatchBuffer { int texelHomePatch[]; };
-layout(std430, binding = 31) readonly buffer PatchFinalValuesBuffer { vec4 patchValues[]; };
-layout(std430, binding = 15) readonly buffer ChildPositionsBuffer { float childPosFlat[]; };
-layout(std430, binding = 16) buffer LightNodeSHOutBuffer { vec4 shOut[]; };
+layout(std430, binding = 4) readonly buffer TexelHomePatchBuffer { int texelHomePatch[]; };
+layout(std430, binding = 5) readonly buffer PatchFinalValuesBuffer { vec4 patchValues[]; };
+layout(std430, binding = 6) readonly buffer ChildPositionsBuffer { float childPosFlat[]; };
+layout(std430, binding = 7) buffer LightNodeSHOutBuffer { vec4 shOut[]; };
 
 uniform int childCount;
 uniform int childOffset;

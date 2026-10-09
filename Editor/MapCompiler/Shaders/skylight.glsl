@@ -4,10 +4,9 @@ layout(local_size_x = 8, local_size_y = 8) in;
 layout(rgba32f, binding = 0) uniform readonly image2D gPosition;
 layout(rgba16f, binding = 1) uniform readonly image2D gNormal;
 
-layout(std430, binding = 8) readonly buffer TexelSourceBrushBuffer { int texelSourceBrush[]; };
-layout(std430, binding = 9) readonly buffer TexelEntityGroupBuffer { int texelEntityGroup[]; };
+layout(std430, binding = 4) readonly buffer TexelOwnerBuffer { ivec2 texelOwner[]; };
 
-layout(std430, binding = 28) buffer SkyVisibilityBuffer { float skyVisibility[]; };
+layout(std430, binding = 5) buffer SkyVisibilityBuffer { float skyVisibility[]; };
 
 
 uniform int rowStart;
@@ -38,8 +37,8 @@ void main()
     vec3 normal = imageLoad(gNormal, texel).rgb;
     vec3 origin = worldPos + normal * 0.01;
 
-    int excludeBrush = texelSourceBrush[texelIdx];
-    int excludeEntityGroup = texelEntityGroup[texelIdx];
+    int excludeBrush = texelOwner[texelIdx].x;
+    int excludeEntityGroup = texelOwner[texelIdx].y;
 
     vec3 t, b;
     BuildOrthonormalBasis(normal, t, b);

@@ -1,9 +1,6 @@
 #version 430
 layout(local_size_x = 64) in;
 
-layout(std430, binding = 21) readonly buffer LayerB1Buffer { vec4 lmB1[]; };
-layout(std430, binding = 22) readonly buffer LayerB2Buffer { vec4 lmB2[]; };
-layout(std430, binding = 23) readonly buffer LayerB3Buffer { vec4 lmB3[]; };
 
 struct GpuPatch
 {
@@ -18,8 +15,8 @@ struct GpuPatch
     vec3 albedo; float pad5;
 };
 
-layout(std430, binding = 10) readonly buffer PatchesBuffer { GpuPatch patches[]; };
-layout(std430, binding = 16) buffer PatchSeedResultBuffer { vec4 seedResult[]; };
+layout(std430, binding = 3) readonly buffer PatchesBuffer { GpuPatch patches[]; };
+layout(std430, binding = 5) buffer PatchSeedResultBuffer { vec4 seedResult[]; };
 
 uniform int patchCount;
 uniform int lightmapResolution;
@@ -53,9 +50,9 @@ void main()
             }
             
             int idx = y * lightmapResolution + x;
-            vec3 c1 = lmB1[idx].rgb;
-            vec3 c2 = lmB2[idx].rgb;
-            vec3 c3 = lmB3[idx].rgb;
+            vec3 c1 = LM_B1(idx).rgb;
+            vec3 c2 = LM_B2(idx).rgb;
+            vec3 c3 = LM_B3(idx).rgb;
 
             accum += (c1 + c2 + c3) / 3.0;
             samples++;

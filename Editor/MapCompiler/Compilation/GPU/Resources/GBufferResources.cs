@@ -35,8 +35,7 @@ public sealed class GBufferResources : IDisposable
     public GpuTexture Basis2 { get; }
     public GpuTexture Basis3 { get; }
 
-    private readonly GpuBuffer texelSourceBrush;
-    private readonly GpuBuffer texelEntityGroup;
+    private readonly GpuBuffer texelOwner;
 
     public GBufferResources(GL gl, GBufferData data, int resolution)
     {
@@ -50,20 +49,24 @@ public sealed class GBufferResources : IDisposable
         Basis2 = new GpuTexture(gl, resolution, resolution, GLEnum.Rgba16f, MemoryMarshal.AsBytes(ToVec4(data.Basis2).AsSpan()));
         Basis3 = new GpuTexture(gl, resolution, resolution, GLEnum.Rgba16f, MemoryMarshal.AsBytes(ToVec4(data.Basis3).AsSpan()));
 
-        texelSourceBrush = new GpuBuffer(gl);
-        texelSourceBrush.Upload<int>(data.SourceBrush);
-        texelEntityGroup = new GpuBuffer(gl);
-        texelEntityGroup.Upload<int>(data.EntityGroup);
+        var owner = new int[data.SourceBrush.Length * 2];
+        for (int i = 0; i < data.SourceBrush.Length; i++)
+        {
+            owner[i * 2] = data.SourceBrush[i];
+            owner[i * 2 + 1] = data.EntityGroup[i];
+        }
+
+        texelOwner = new GpuBuffer(gl);
+        texelOwner.Upload<int>(owner);
     }
-    private GBufferResources(GpuTexture position, GpuTexture normal, GpuTexture basis1, GpuTexture basis2, GpuTexture basis3, GpuBuffer texelSourceBrush, GpuBuffer texelEntityGroup)
+    private GBufferResources(GpuTexture position, GpuTexture normal, GpuTexture basis1, GpuTexture basis2, GpuTexture basis3, GpuBuffer texelOwner)
     {
         Position = position; Normal = normal; Basis1 = basis1; Basis2 = basis2; Basis3 = basis3;
-        this.texelSourceBrush = texelSourceBrush;
-        this.texelEntityGroup = texelEntityGroup;
+        this.texelOwner = texelOwner;
     }
 
-    public static GBufferResources FromRaster(GpuTexture position, GpuTexture normal, GpuTexture basis1, GpuTexture basis2, GpuTexture basis3, GpuBuffer texelSourceBrush, GpuBuffer texelEntityGroup)
-        => new GBufferResources(position, normal, basis1, basis2, basis3, texelSourceBrush, texelEntityGroup);
+    public static GBufferResources FromRaster(GpuTexture position, GpuTexture normal, GpuTexture basis1, GpuTexture basis2, GpuTexture basis3, GpuBuffer texelOwner)
+        => new GBufferResources(position, normal, basis1, basis2, basis3, texelOwner);
 
     public void BindImages()
     {
@@ -73,11 +76,9 @@ public sealed class GBufferResources : IDisposable
         Basis2.BindImage(GpuBindings.ImageBasis2, readOnly: true);
         Basis3.BindImage(GpuBindings.ImageBasis3, readOnly: true);
     }
-
     public void BindTexelBuffers()
     {
-        texelSourceBrush.BindBase(GpuBindings.TexelSourceBrush);
-        texelEntityGroup.BindBase(GpuBindings.TexelEntityGroup);
+        texelOwner.BindBase(GpuBindings.TexelOwner);
     }
 
     private static Vector4[] ToVec4(Vector3[] src)
@@ -97,7 +98,6 @@ public sealed class GBufferResources : IDisposable
         Basis1.Dispose();
         Basis2.Dispose();
         Basis3.Dispose();
-        texelSourceBrush.Dispose();
-        texelEntityGroup.Dispose();
+        texelOwner.Dispose();
     }
 }

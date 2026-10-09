@@ -4,10 +4,7 @@ layout(local_size_x = 8, local_size_y = 8) in;
 layout(rgba32f, binding = 0) uniform readonly image2D gPosition;
 layout(rgba16f, binding = 1) uniform readonly image2D gNormal;
 
-layout(std430, binding = 21) buffer LayerB1Buffer { vec4 lmB1[]; };
-layout(std430, binding = 22) buffer LayerB2Buffer { vec4 lmB2[]; };
-layout(std430, binding = 23) buffer LayerB3Buffer { vec4 lmB3[]; };
-layout(std430, binding = 28) readonly buffer SkyVisibilityBuffer { float skyVisibility[]; };
+layout(std430, binding = 5) readonly buffer SkyVisibilityBuffer { float skyVisibility[]; };
 
 uniform int rowStart;
 uniform vec3 ambientColor;
@@ -75,7 +72,7 @@ void main()
     vec3 contribution = ambientColor * ambientIntensity * blurred;
 
     int texelIdx = texel.y * size.x + texel.x;
-    lmB1[texelIdx] += vec4(contribution, 0.0);
-    lmB2[texelIdx] += vec4(contribution, 0.0);
-    lmB3[texelIdx] += vec4(contribution, 0.0);
+    LM_B1(texelIdx) += vec4(contribution, 0.0);
+    LM_B2(texelIdx) += vec4(contribution, 0.0);
+    LM_B3(texelIdx) += vec4(contribution, 0.0);
 }

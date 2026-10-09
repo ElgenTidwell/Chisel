@@ -1,11 +1,11 @@
 #version 430
 layout(local_size_x = 64) in;
 
-layout(std430, binding = 10) readonly buffer PatchesBuffer { GpuPatch patches[]; };
-layout(std430, binding = 18) readonly buffer TexelHomePatchBuffer { int texelHomePatch[]; };
-layout(std430, binding = 29) readonly buffer PatchShotInBuffer { vec4 shotIn[]; };
-layout(std430, binding = 30) buffer PatchShotOutBuffer { vec4 shotOut[]; };
-layout(std430, binding = 11) buffer PatchAccumBuffer { vec4 accumTotal[]; };
+layout(std430, binding = 3) readonly buffer PatchesBuffer { GpuPatch patches[]; };
+layout(std430, binding = 4) readonly buffer TexelHomePatchBuffer { int texelHomePatch[]; };
+layout(std430, binding = 5) readonly buffer PatchShotInBuffer { vec4 shotIn[]; };
+layout(std430, binding = 6) buffer PatchShotOutBuffer { vec4 shotOut[]; };
+layout(std430, binding = 7) buffer PatchAccumBuffer { vec4 accumTotal[]; };
 
 uniform int patchCount;
 uniform int patchOffset;

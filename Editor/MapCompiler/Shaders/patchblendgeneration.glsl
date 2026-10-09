@@ -1,13 +1,12 @@
 #version 430
 layout(local_size_x = 64) in;
 
-layout(std430, binding = 10) readonly buffer PatchesBuffer { GpuPatch patches[]; };
-layout(std430, binding = 12) readonly buffer BucketOffsetsBuffer { int bucketOffsets[]; };
-layout(std430, binding = 13) readonly buffer BucketIndicesBuffer { int bucketIndices[]; };
-layout(std430, binding = 19) writeonly buffer NeighborCountBuffer { int neighborCount[]; };
-layout(std430, binding = 20) writeonly buffer NeighborIndicesBuffer { int neighborIndices[]; };
-layout(std430, binding = 29) readonly buffer CellOffsetsBuffer { int cellOffsetsFlat[]; };
-layout(std430, binding = 30) writeonly buffer NeighborVisibilityBuffer { float neighborVisibility[]; };
+layout(std430, binding = 3) readonly buffer PatchesBuffer { GpuPatch patches[]; };
+layout(std430, binding = 4) readonly buffer BucketOffsetsBuffer { int bucketOffsets[]; };
+layout(std430, binding = 5) readonly buffer BucketIndicesBuffer { int bucketIndices[]; };
+layout(std430, binding = 6) writeonly buffer NeighborCountBuffer { int neighborCount[]; };
+layout(std430, binding = 7) writeonly buffer NeighborIndicesBuffer { int neighborIndices[]; };
+layout(std430, binding = 2) readonly buffer CellOffsetsBuffer { int cellOffsetsFlat[]; };
 
 uniform int patchCount;
 uniform int patchOffset;

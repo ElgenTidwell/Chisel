@@ -1,8 +1,8 @@
 #version 430
 layout(local_size_x = 64) in;
 
-layout(std430, binding = 10) readonly buffer PatchesBuffer { GpuPatch patches[]; };
-layout(std430, binding = 14) buffer SkyResultBuffer { float skyResult[]; };
+layout(std430, binding = 3) readonly buffer PatchesBuffer { GpuPatch patches[]; };
+layout(std430, binding = 5) buffer SkyResultBuffer { float skyResult[]; };
 
 uniform int patchCount;
 uniform int patchOffset;

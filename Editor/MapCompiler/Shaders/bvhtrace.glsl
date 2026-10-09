@@ -43,17 +43,15 @@ struct GpuLight
     float padding;
 };
 
-layout(std430, binding = 1) readonly buffer BvhNodesBuffer { BvhNode nodes[]; };
-layout(std430, binding = 2) readonly buffer TriV0Buffer { float triV0[]; };
-layout(std430, binding = 3) readonly buffer TriV1Buffer { float triV1[]; };
-layout(std430, binding = 4) readonly buffer TriV2Buffer { float triV2[]; };
-layout(std430, binding = 5) readonly buffer TriSourceBrushBuffer { int triSourceBrush[]; };
-layout(std430, binding = 6) readonly buffer TriEntityGroupBuffer { int triEntityGroup[]; };
-layout(std430, binding = 7) readonly buffer TriIsSkyboxBuffer { int triIsSkybox[]; };
+struct BvhTriangle
+{
+    vec3 v0; int sourceBrush;
+    vec3 v1; int entityGroup;
+    vec3 v2; int isSkybox;
+};
 
-vec3 GetTriV0(uint triIdx) { uint i = triIdx * 3u; return vec3(triV0[i], triV0[i + 1u], triV0[i + 2u]); }
-vec3 GetTriV1(uint triIdx) { uint i = triIdx * 3u; return vec3(triV1[i], triV1[i + 1u], triV1[i + 2u]); }
-vec3 GetTriV2(uint triIdx) { uint i = triIdx * 3u; return vec3(triV2[i], triV2[i + 1u], triV2[i + 2u]); }
+layout(std430, binding = 0) readonly buffer BvhNodesBuffer { BvhNode nodes[]; };
+layout(std430, binding = 1) readonly buffer BvhTrianglesBuffer { BvhTriangle triangles[]; };
 
 void BuildOrthonormalBasis(vec3 n, out vec3 t, out vec3 b)
 {
@@ -169,18 +167,19 @@ bool TraceRayBvhAny(vec3 origin, vec3 dir, float maxDist, int excludeBrush, int 
             for (uint i = 0u; i < node.triCount; i++)
             {
                 uint triIdx = node.leftFirst + i;
+                BvhTriangle tri = triangles[triIdx];
 
-                if (excludeBrush >= 0 && triSourceBrush[triIdx] == excludeBrush)
+                if (excludeBrush >= 0 && tri.sourceBrush == excludeBrush)
                 {
                     continue;
                 }
-                if (triEntityGroup[triIdx] >= 0 && triEntityGroup[triIdx] != excludeEntityGroup)
+                if (tri.entityGroup >= 0 && tri.entityGroup != excludeEntityGroup)
                 {
                     continue;
                 }
 
                 float t, u, v;
-                if (IntersectTriangle(origin, dir, GetTriV0(triIdx), GetTriV1(triIdx), GetTriV2(triIdx), t, u, v) && t < maxDist)
+                if (IntersectTriangle(origin, dir, tri.v0, tri.v1, tri.v2, t, u, v) && t < maxDist)
                 {
                     return true;
                 }
@@ -223,24 +222,25 @@ BvhHit TraceRayBvh(vec3 origin, vec3 dir, float maxDist, int excludeBrush, int e
             for (uint i = 0u; i < node.triCount; i++)
             {
                 uint triIdx = node.leftFirst + i;
+                BvhTriangle tri = triangles[triIdx];
 
-                if (excludeBrush >= 0 && triSourceBrush[triIdx] == excludeBrush)
+                if (excludeBrush >= 0 && tri.sourceBrush == excludeBrush)
                 {
                     continue;
                 }
-                if (triEntityGroup[triIdx] >= 0 && triEntityGroup[triIdx] != excludeEntityGroup)
+                if (tri.entityGroup >= 0 && tri.entityGroup != excludeEntityGroup)
                 {
                     continue;
                 }
 
                 float t, u, v;
-                if (IntersectTriangle(origin, dir, GetTriV0(triIdx), GetTriV1(triIdx), GetTriV2(triIdx), t, u, v))
+                if (IntersectTriangle(origin, dir, tri.v0, tri.v1, tri.v2, t, u, v))
                 {
                     if (t < result.distance)
                     {
                         result.hit = true;
                         result.distance = t;
-                        result.isSkybox = triIsSkybox[triIdx] != 0;
+                        result.isSkybox = tri.isSkybox != 0;
                         result.u = u;
                         result.v = v;
                         result.triIdx = triIdx;

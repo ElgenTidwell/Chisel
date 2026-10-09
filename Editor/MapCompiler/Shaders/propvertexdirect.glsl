@@ -1,10 +1,10 @@
 #version 430
 layout(local_size_x = 8) in;
 
-layout(std430, binding = 0) readonly buffer LightsBuffer { GpuLight lights[]; };
-layout(std430, binding = 11) readonly buffer VertPositionsBuffer { float vertPosFlat[]; };
-layout(std430, binding = 12) readonly buffer VertNormalsBuffer { float vertNormalFlat[]; };
-layout(std430, binding = 13) buffer VertDirectOutBuffer { vec4 directOut[]; };
+layout(std430, binding = 3) readonly buffer LightsBuffer { GpuLight lights[]; };
+layout(std430, binding = 4) readonly buffer VertPositionsBuffer { float vertPosFlat[]; };
+layout(std430, binding = 5) readonly buffer VertNormalsBuffer { float vertNormalFlat[]; };
+layout(std430, binding = 6) buffer VertDirectOutBuffer { vec4 directOut[]; };
 
 uniform int vertCount;
 uniform int vertOffset;

@@ -554,11 +554,10 @@ namespace MapCompiler
             CompilerConsole.Step("Building grid...");
             float blendRadius = 8f;
             var patchGrid = gpu.BuildPatchGrid(patches, absoluteMin, absoluteMax, 4f);
-            var (neighborCounts, neighborIndices, neighborVisibility) = gpu.GeneratePatchBlendNeighbors(patchResources, patchGrid, patches, patches.Length, blendRadius);
+            var (neighborCounts, neighborIndices) = gpu.GeneratePatchBlendNeighbors(patchResources, patchGrid, patches, patches.Length, blendRadius);
 
             CompilerConsole.Step("Blending patches...");
-            gpu.BlendPatchesToLuxels(texelHomePatchBuffer, patchValuesBuffer, neighborCounts, neighborIndices, neighborVisibility, patchResources, gpuLayer, blendRadius);
-            //gpu.BlendPatchesToLuxels(texelHomePatchBuffer, patchValuesBuffer, patchGrid, gpuLayer, blendRadius);
+            gpu.BlendPatchesToLuxels(texelHomePatchBuffer, patchValuesBuffer, neighborCounts, neighborIndices, patchResources, gpuLayer, blendRadius);
             gpu.RunAmbientOcclusion(gpuLayer);
 
             CompilerConsole.Step("Reading...");
@@ -587,7 +586,7 @@ namespace MapCompiler
 
                 CompilerConsole.Step("Blending patches...");
                 using var groupPatchValuesBuffer = gpu.UploadPatchValues(groupPatchColors);
-                gpu.BlendPatchesToLuxels(texelHomePatchBuffer, groupPatchValuesBuffer, neighborCounts, neighborIndices, neighborVisibility, patchResources, groupLayer, blendRadius);
+                gpu.BlendPatchesToLuxels(texelHomePatchBuffer, groupPatchValuesBuffer, neighborCounts, neighborIndices, patchResources, groupLayer, blendRadius);
 
                 //gpu.BlendPatchesToLuxels(texelHomePatchBuffer, patchValuesBuffer, patchGrid, gpuLayer, blendRadius);
 

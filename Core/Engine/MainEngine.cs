@@ -388,6 +388,8 @@ namespace Engine
 
             EnsureCommandsUpdated();
 
+            InputRegistry.Load();
+
             guiRenderer = new ImGuiRenderer(this);
 
             GumProject = Gum.Initialize(this, gumProjectPath);

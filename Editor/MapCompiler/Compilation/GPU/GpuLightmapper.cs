@@ -15,7 +15,6 @@ public sealed class GpuLightmapper : IDisposable
     public readonly GpuContext Context;
     private BvhResources bvh;
     private GBufferResources gbuffer;
-    private PatchBlendTopology blendTopology;
 
     private GpuLightmapper(GpuContext context)
     {
@@ -31,10 +30,6 @@ public sealed class GpuLightmapper : IDisposable
     public void BuildBvh(Brush[] brushes, Terrain[] terrains, Color[] matColors, List<BvhTriangle> extraTriangles = null)
     {
         bvh = new BvhResources(Context.GL, brushes, terrains, matColors, extraTriangles);
-    }
-    public void BuildPatchBlendTopology(int[] texelHomePatch, int[] offsets, int[] flat)
-    {
-        blendTopology = new PatchBlendTopology(Context.GL, texelHomePatch, offsets, flat);
     }
 
     public void UploadGBuffer(GBufferData data, int resolution)
@@ -110,13 +105,13 @@ public sealed class GpuLightmapper : IDisposable
     //{
     //    PatchLuxelBlendPass.Run(Context.GL, gbuffer, bvh, texelHomePatch, patchValues, grid, layer, blendRadius, maxContributions);
     //}
-    public (GpuBuffer counts, GpuBuffer indices, GpuBuffer visibility) GeneratePatchBlendNeighbors(PatchResources patches, PatchBucketGridResources grid, Patch[] patchArray, int patchCount, float blendRadius, int maxNeighbors = 64)
+    public (GpuBuffer counts, GpuBuffer indices) GeneratePatchBlendNeighbors(PatchResources patches, PatchBucketGridResources grid, Patch[] patchArray, int patchCount, float blendRadius, int maxNeighbors = 64)
     {
         return PatchBlendGenerationPass.Run(Context.GL, bvh, patches, grid, patchArray, patchCount, blendRadius, maxNeighbors);
     }
-    public void BlendPatchesToLuxels(GpuBuffer texelHomePatch, GpuBuffer patchValues, GpuBuffer neighborCounts, GpuBuffer neighborIndices, GpuBuffer neighborVisibility, PatchResources patches, LightmapLayerResources layer, float blendRadius, int maxNeighbors = 64)
+    public void BlendPatchesToLuxels(GpuBuffer texelHomePatch, GpuBuffer patchValues, GpuBuffer neighborCounts, GpuBuffer neighborIndices, PatchResources patches, LightmapLayerResources layer, float blendRadius, int maxNeighbors = 64)
     {
-        PatchLuxelBlendPass.Run(Context.GL, gbuffer, texelHomePatch, patchValues, neighborCounts, neighborIndices, neighborVisibility, patches, layer, blendRadius, maxNeighbors);
+        PatchLuxelBlendPass.Run(Context.GL, gbuffer, bvh, texelHomePatch, patchValues, neighborCounts, neighborIndices, patches, layer, blendRadius, maxNeighbors);
     }
 
     public LightNodePositions PrepareLightNodePositions(List<LightNodeBundle> lightNodes)

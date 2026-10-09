@@ -1,9 +1,9 @@
 #version 430
 layout(local_size_x = 8) in;
 
-layout(std430, binding = 0) readonly buffer LightsBuffer { GpuLight lights[]; };
-layout(std430, binding = 15) readonly buffer ChildPositionsBuffer { float childPosFlat[]; };
-layout(std430, binding = 17) buffer LightNodeBlockedBuffer { int blocked[]; };
+layout(std430, binding = 3) readonly buffer LightsBuffer { GpuLight lights[]; };
+layout(std430, binding = 6) readonly buffer ChildPositionsBuffer { float childPosFlat[]; };
+layout(std430, binding = 7) buffer LightNodeBlockedBuffer { int blocked[]; };
 
 uniform int childCount;
 uniform int childOffset;

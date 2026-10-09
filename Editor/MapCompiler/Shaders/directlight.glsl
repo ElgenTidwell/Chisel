@@ -2,9 +2,6 @@
 
 layout(local_size_x = 8, local_size_y = 8) in;
 
-layout(std430, binding = 21) buffer LayerB1Buffer { vec4 lmB1[]; };
-layout(std430, binding = 22) buffer LayerB2Buffer { vec4 lmB2[]; };
-layout(std430, binding = 23) buffer LayerB3Buffer { vec4 lmB3[]; };
 
 layout(rgba32f, binding = 0) uniform readonly image2D gPosition;
 layout(rgba16f, binding = 1) uniform readonly image2D gNormal;
@@ -12,9 +9,8 @@ layout(rgba16f, binding = 2) uniform readonly image2D gBasis1;
 layout(rgba16f, binding = 3) uniform readonly image2D gBasis2;
 layout(rgba16f, binding = 4) uniform readonly image2D gBasis3;
 
-layout(std430, binding = 0) readonly buffer LightsBuffer { GpuLight lights[]; };
-layout(std430, binding = 8) readonly buffer TexelSourceBrushBuffer { int texelSourceBrush[]; };
-layout(std430, binding = 9) readonly buffer TexelEntityGroupBuffer { int texelEntityGroup[]; };
+layout(std430, binding = 3) readonly buffer LightsBuffer { GpuLight lights[]; };
+layout(std430, binding = 4) readonly buffer TexelOwnerBuffer { ivec2 texelOwner[]; };
 
 uniform int lightCount;
 uniform int rowStart;
@@ -92,9 +88,9 @@ void main()
     vec4 posValid = imageLoad(gPosition, texel);
     if (posValid.a < 0.5)
     {
-        lmB1[texelIdx] = vec4(0.0);
-        lmB2[texelIdx] = vec4(0.0);
-        lmB3[texelIdx] = vec4(0.0);
+        LM_B1(texelIdx) = vec4(0.0);
+        LM_B2(texelIdx) = vec4(0.0);
+        LM_B3(texelIdx) = vec4(0.0);
         return;
     }
 
@@ -104,8 +100,8 @@ void main()
     vec3 basis2 = imageLoad(gBasis2, texel).rgb;
     vec3 basis3 = imageLoad(gBasis3, texel).rgb;
 
-    int excludeBrush = texelSourceBrush[texelIdx];
-    int excludeEntityGroup = texelEntityGroup[texelIdx];
+    int excludeBrush = texelOwner[texelIdx].x;
+    int excludeEntityGroup = texelOwner[texelIdx].y;
 
     vec3 accum1 = vec3(0.0);
     vec3 accum2 = vec3(0.0);
@@ -193,7 +189,7 @@ void main()
         accum2 += contrib * w2;
         accum3 += contrib * w3;
     }
-    lmB1[texelIdx] = vec4(accum1, 1.0);
-    lmB2[texelIdx] = vec4(accum2, 1.0);
-    lmB3[texelIdx] = vec4(accum3, 1.0);
+    LM_B1(texelIdx) = vec4(accum1, 1.0);
+    LM_B2(texelIdx) = vec4(accum2, 1.0);
+    LM_B3(texelIdx) = vec4(accum3, 1.0);
 }

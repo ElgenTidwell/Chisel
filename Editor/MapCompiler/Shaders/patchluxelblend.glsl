@@ -7,16 +7,12 @@ layout(rgba16f, binding = 2) uniform readonly image2D gBasis1;
 layout(rgba16f, binding = 3) uniform readonly image2D gBasis2;
 layout(rgba16f, binding = 4) uniform readonly image2D gBasis3;
 
-layout(std430, binding = 10) readonly buffer PatchesBuffer { GpuPatch patches[]; };
-layout(std430, binding = 18) readonly buffer TexelHomePatchBuffer { int texelHomePatch[]; };
-layout(std430, binding = 31) readonly buffer PatchFinalValuesBuffer { vec4 patchValues[]; };
-layout(std430, binding = 19) readonly buffer NeighborCountBuffer { int neighborCount[]; };
-layout(std430, binding = 20) readonly buffer NeighborIndicesBuffer { int neighborIndices[]; };
-layout(std430, binding = 30) readonly buffer NeighborVisibilityBuffer { float neighborVisibility[]; };
+layout(std430, binding = 3) readonly buffer PatchesBuffer { GpuPatch patches[]; };
+layout(std430, binding = 4) readonly buffer TexelHomePatchBuffer { int texelHomePatch[]; };
+layout(std430, binding = 5) readonly buffer PatchFinalValuesBuffer { vec4 patchValues[]; };
+layout(std430, binding = 6) readonly buffer NeighborCountBuffer { int neighborCount[]; };
+layout(std430, binding = 7) readonly buffer NeighborIndicesBuffer { int neighborIndices[]; };
 
-layout(std430, binding = 21) buffer LayerB1Buffer { vec4 lmB1[]; };
-layout(std430, binding = 22) buffer LayerB2Buffer { vec4 lmB2[]; };
-layout(std430, binding = 23) buffer LayerB3Buffer { vec4 lmB3[]; };
 
 uniform int rowStart;
 uniform float blendRadius;
@@ -121,7 +117,7 @@ void main()
     vec3 blended2 = accum2 / max(sumW2, 1);
     vec3 blended3 = accum3 / max(sumW3, 1);
 
-    lmB1[texelIdx] += vec4(blended1, 0.0);
-    lmB2[texelIdx] += vec4(blended2, 0.0);
-    lmB3[texelIdx] += vec4(blended3, 0.0);
+    LM_B1(texelIdx) += vec4(blended1, 0.0);
+    LM_B2(texelIdx) += vec4(blended2, 0.0);
+    LM_B3(texelIdx) += vec4(blended3, 0.0);
 }

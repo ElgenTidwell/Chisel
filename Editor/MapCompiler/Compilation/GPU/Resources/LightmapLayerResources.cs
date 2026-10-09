@@ -26,10 +26,7 @@ public sealed class LightmapLayerResources : IDisposable
 
     public void Bind()
     {
-        nuint rangeBytes = (nuint)(total * VectorBytes);
-        combined.BindRange(GpuBindings.LayerB1, 0, rangeBytes);
-        combined.BindRange(GpuBindings.LayerB2, (nint)rangeBytes, rangeBytes);
-        combined.BindRange(GpuBindings.LayerB3, (nint)(rangeBytes * 2), rangeBytes);
+        combined.BindBase(GpuBindings.Lightmap);
     }
 
     public void ReadBackInto(LightmapColor[] lmB1, LightmapColor[] lmB2, LightmapColor[] lmB3)

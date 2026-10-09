@@ -29,13 +29,32 @@ public struct BvhNode
     public uint MissIndex;
 }
 
+[StructLayout(LayoutKind.Sequential, Size = 48)]
+public struct GpuBvhTriangle
+{
+    public Vector3 V0;
+    public int SourceBrush;
+    public Vector3 V1;
+    public int EntityGroup;
+    public Vector3 V2;
+    public int IsSkybox;
+}
+
+[StructLayout(LayoutKind.Sequential, Size = 32)]
+public struct GpuBvhSurface
+{
+    public Vector2 Uv0;
+    public Vector2 Uv1;
+    public Vector2 Uv2;
+    public uint Albedo;
+    public uint Padding;
+}
+
 public sealed class BvhResources : IDisposable
 {
     private readonly GpuBuffer nodes;
-    private readonly GpuBuffer triV0, triV1, triV2;
-    private readonly GpuBuffer triUv0, triUv1, triUv2;
-    private readonly GpuBuffer triAlbedo;
-    private readonly GpuBuffer triSourceBrush, triEntityGroup, triIsSkybox;
+    private readonly GpuBuffer triangles;
+    private readonly GpuBuffer surfaces;
 
     public BvhResources(GL gl, Brush[] brushes, Terrain[] terrains, Color[] matColors, List<BvhTriangle> extraTriangles = null)
     {
@@ -45,64 +64,59 @@ public sealed class BvhResources : IDisposable
         var builtNodes = BuildBvh(tris, out int[] triIndices);
 
         int n = triIndices.Length;
-        var v0 = new Vector3[n];
-        var v1 = new Vector3[n];
-        var v2 = new Vector3[n];
-        var uv0 = new Vector2[n];
-        var uv1 = new Vector2[n];
-        var uv2 = new Vector2[n];
-        var albedoFlat = new float[n * 3];
-        var sourceBrush = new int[n];
-        var entityGroup = new int[n];
-        var isSkybox = new int[n];
+        var gpuTriangles = new GpuBvhTriangle[n];
+        var gpuSurfaces = new GpuBvhSurface[n];
 
         for (int i = 0; i < n; i++)
         {
             var tri = tris[triIndices[i]];
-            v0[i] = tri.V0;
-            v1[i] = tri.V1;
-            v2[i] = tri.V2;
-            uv0[i] = tri.Uv0;
-            uv1[i] = tri.Uv1;
-            uv2[i] = tri.Uv2;
-            albedoFlat[i * 3] = tri.Albedo.X;
-            albedoFlat[i * 3 + 1] = tri.Albedo.Y;
-            albedoFlat[i * 3 + 2] = tri.Albedo.Z;
-            sourceBrush[i] = tri.SourceBrush;
-            entityGroup[i] = tri.EntityGroup;
-            isSkybox[i] = tri.IsSkybox ? 1 : 0;
+
+            gpuTriangles[i] = new GpuBvhTriangle
+            {
+                V0 = tri.V0,
+                SourceBrush = tri.SourceBrush,
+                V1 = tri.V1,
+                EntityGroup = tri.EntityGroup,
+                V2 = tri.V2,
+                IsSkybox = tri.IsSkybox ? 1 : 0
+            };
+
+            gpuSurfaces[i] = new GpuBvhSurface
+            {
+                Uv0 = tri.Uv0,
+                Uv1 = tri.Uv1,
+                Uv2 = tri.Uv2,
+                Albedo = PackAlbedo(tri.Albedo)
+            };
         }
 
         nodes = new GpuBuffer(gl);
         nodes.Upload<BvhNode>(builtNodes.ToArray());
 
-        triV0 = new GpuBuffer(gl); triV0.Upload<Vector3>(v0);
-        triV1 = new GpuBuffer(gl); triV1.Upload<Vector3>(v1);
-        triV2 = new GpuBuffer(gl); triV2.Upload<Vector3>(v2);
+        triangles = new GpuBuffer(gl);
+        triangles.Upload<GpuBvhTriangle>(gpuTriangles);
 
-        triUv0 = new GpuBuffer(gl); triUv0.Upload<Vector2>(uv0);
-        triUv1 = new GpuBuffer(gl); triUv1.Upload<Vector2>(uv1);
-        triUv2 = new GpuBuffer(gl); triUv2.Upload<Vector2>(uv2);
-
-        triAlbedo = new GpuBuffer(gl); triAlbedo.Upload<float>(albedoFlat);
-
-        triSourceBrush = new GpuBuffer(gl); triSourceBrush.Upload<int>(sourceBrush);
-        triEntityGroup = new GpuBuffer(gl); triEntityGroup.Upload<int>(entityGroup);
-        triIsSkybox = new GpuBuffer(gl); triIsSkybox.Upload<int>(isSkybox);
+        surfaces = new GpuBuffer(gl);
+        surfaces.Upload<GpuBvhSurface>(gpuSurfaces);
     }
+
     public void Bind()
     {
         nodes.BindBase(GpuBindings.BvhNodes);
-        triV0.BindBase(GpuBindings.TriV0);
-        triV1.BindBase(GpuBindings.TriV1);
-        triV2.BindBase(GpuBindings.TriV2);
-        triUv0.BindBase(GpuBindings.TriUv0);
-        triUv1.BindBase(GpuBindings.TriUv1);
-        triUv2.BindBase(GpuBindings.TriUv2);
-        triAlbedo.BindBase(GpuBindings.TriAlbedo);
-        triSourceBrush.BindBase(GpuBindings.TriSourceBrush);
-        triEntityGroup.BindBase(GpuBindings.TriEntityGroup);
-        triIsSkybox.BindBase(GpuBindings.TriIsSkybox);
+        triangles.BindBase(GpuBindings.BvhTriangles);
+    }
+
+    public void BindSurfaces()
+    {
+        surfaces.BindBase(GpuBindings.BvhSurfaces);
+    }
+
+    private static uint PackAlbedo(Vector3 albedo)
+    {
+        uint r = (uint)Math.Clamp(MathF.Round(albedo.X * 255f), 0f, 255f);
+        uint g = (uint)Math.Clamp(MathF.Round(albedo.Y * 255f), 0f, 255f);
+        uint b = (uint)Math.Clamp(MathF.Round(albedo.Z * 255f), 0f, 255f);
+        return r | (g << 8) | (b << 16) | (255u << 24);
     }
 
     private static List<BvhTriangle> BuildUnifiedTriangleList(Brush[] brushes, Terrain[] terrains, Color[] matColors)
@@ -377,9 +391,7 @@ public sealed class BvhResources : IDisposable
     public void Dispose()
     {
         nodes.Dispose();
-        triV0.Dispose(); triV1.Dispose(); triV2.Dispose();
-        triUv0.Dispose(); triUv1.Dispose(); triUv2.Dispose();
-        triAlbedo.Dispose();
-        triSourceBrush.Dispose(); triEntityGroup.Dispose(); triIsSkybox.Dispose();
+        triangles.Dispose();
+        surfaces.Dispose();
     }
 }

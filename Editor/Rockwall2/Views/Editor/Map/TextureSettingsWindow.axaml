@@ -166,11 +166,6 @@
                       Create Terrain
                     </TextBlock>
                   </Button>
-                  <Button Height="48" Padding="16" IsEnabled="false" x:Name="tDelete" Click="tDelete_Click">
-                    <TextBlock VerticalAlignment="Center">
-                      Delete Terrain
-                    </TextBlock>
-                  </Button>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" Spacing="16">
                   <Button Height="48" Padding="16" IsEnabled="false" x:Name="tPMat" Click="tPMat_Click">

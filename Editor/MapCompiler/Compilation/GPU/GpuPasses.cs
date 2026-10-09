@@ -14,7 +14,7 @@ public static class DirectLightPass
     public static void Run(GL gl, BvhResources bvh, GBufferResources gbuffer, List<Light> lights, LightmapLayerResources layer)
     {
         using var lightResources = new LightResources(gl, lights);
-        using var program = new ComputeProgram(gl, "DirectLight.glsl", "BvhTrace.glsl");
+        using var program = new ComputeProgram(gl, "DirectLight.glsl", "Lightmap.glsl", "BvhTrace.glsl");
 
         program.Use();
 
@@ -56,7 +56,7 @@ public static class SkyBlurPass
 {
     public static void Run(GL gl, GBufferResources gbuffer, GpuBuffer skyVisibility, LightmapLayerResources layer, Vector3 ambientColor, float ambientIntensity, int blurRadius = 4)
     {
-        using var program = new ComputeProgram(gl, "SkyBlurApply.glsl");
+        using var program = new ComputeProgram(gl, "SkyBlurApply.glsl", "Lightmap.glsl");
         program.Use();
 
         gbuffer.BindImages();
@@ -111,6 +111,7 @@ public static class PatchGatherPass
             program.Use();
 
             bvh.Bind();
+            bvh.BindSurfaces();
             patches.Bind();
             current.BindBase(GpuBindings.PatchGatherIn);
             next.BindBase(GpuBindings.PatchGatherOut);
@@ -154,6 +155,7 @@ public static class PatchBouncePass
             program.Use();
 
             bvh.Bind();
+            bvh.BindSurfaces();
             patches.Bind();
             texelHomePatch.BindBase(GpuBindings.TexelHomePatch);
             shotIn.BindBase(GpuBindings.PatchGatherIn);
@@ -187,7 +189,7 @@ public static class PatchSeedPass
         using var seedBuffer = new GpuBuffer(gl);
         seedBuffer.Upload<Vector4>(new Vector4[patchCount], usage: BufferUsageARB.StreamRead);
 
-        using var program = new ComputeProgram(gl, "PatchSeed.glsl");
+        using var program = new ComputeProgram(gl, "PatchSeed.glsl", "Lightmap.glsl");
         program.Use();
 
         layer.Bind();
@@ -246,16 +248,13 @@ public static class PatchLuxelBlendPass
 */
 public static class PatchBlendGenerationPass
 {
-    public static (GpuBuffer counts, GpuBuffer indices, GpuBuffer visibility) Run(GL gl, BvhResources bvh, PatchResources patches, PatchBucketGridResources grid, Patch[] patchArray, int patchCount, float blendRadius, int maxNeighbors)
+    public static (GpuBuffer counts, GpuBuffer indices) Run(GL gl, BvhResources bvh, PatchResources patches, PatchBucketGridResources grid, Patch[] patchArray, int patchCount, float blendRadius, int maxNeighbors)
     {
         var counts = new GpuBuffer(gl);
         counts.Upload<int>(new int[patchCount]);
 
         var indices = new GpuBuffer(gl);
         indices.Upload<int>(new int[patchCount * maxNeighbors]);
-
-        var visibility = new GpuBuffer(gl);
-        visibility.Upload<float>(new float[patchCount * maxNeighbors]);
 
         float maxExtent = 0f;
         for (int i = 0; i < patchArray.Length; i++)
@@ -284,7 +283,6 @@ public static class PatchBlendGenerationPass
         grid.Bind();
         counts.BindBase(GpuBindings.PatchNeighborCount);
         indices.BindBase(GpuBindings.PatchNeighborIndices);
-        visibility.BindBase(GpuBindings.PatchNeighborVisibility);
         offsetsBuffer.BindBase(GpuBindings.PatchBlendCellOffsets);
 
         program.SetUniform("patchCount", patchCount);
@@ -297,25 +295,25 @@ public static class PatchBlendGenerationPass
 
         program.DispatchUnitsChunked(gl, patchCount, "patchOffset", 64, MemoryBarrierMask.ShaderStorageBarrierBit, chunkSize: 65536, label: "Finding blend neighbors");
 
-        return (counts, indices, visibility);
+        return (counts, indices);
     }
 }
 
 public static class PatchLuxelBlendPass
 {
-    public static void Run(GL gl, GBufferResources gbuffer, GpuBuffer texelHomePatch, GpuBuffer patchFinalValues, GpuBuffer neighborCounts, GpuBuffer neighborIndices, GpuBuffer neighborVisibility, PatchResources patches, LightmapLayerResources layer, float blendRadius, int maxNeighbors)
+    public static void Run(GL gl, GBufferResources gbuffer, BvhResources bvh, GpuBuffer texelHomePatch, GpuBuffer patchFinalValues, GpuBuffer neighborCounts, GpuBuffer neighborIndices, PatchResources patches, LightmapLayerResources layer, float blendRadius, int maxNeighbors)
     {
-        using var program = new ComputeProgram(gl, "PatchLuxelBlend.glsl", "BvhTrace.glsl");
+        using var program = new ComputeProgram(gl, "PatchLuxelBlend.glsl", "Lightmap.glsl", "BvhTrace.glsl");
         program.Use();
 
         gbuffer.BindImages();
         layer.Bind();
+        bvh.Bind();
         patches.Bind();
         texelHomePatch.BindBase(GpuBindings.TexelHomePatch);
         patchFinalValues.BindBase(GpuBindings.PatchFinalValues);
         neighborCounts.BindBase(GpuBindings.PatchNeighborCount);
         neighborIndices.BindBase(GpuBindings.PatchNeighborIndices);
-        neighborVisibility.BindBase(GpuBindings.PatchNeighborVisibility);
 
         program.SetUniform("blendRadius", blendRadius);
         program.SetUniform("maxNeighbors", maxNeighbors);
@@ -348,7 +346,7 @@ public static class AOApplyPass
 {
     public static void Run(GL gl, GBufferResources gbuffer, GpuBuffer aoResult, LightmapLayerResources layer, int blurRadius = 3, float aoStrength = 1f)
     {
-        using var program = new ComputeProgram(gl, "AOBlurApply.glsl");
+        using var program = new ComputeProgram(gl, "AOBlurApply.glsl", "Lightmap.glsl");
         program.Use();
 
         gbuffer.BindImages();
@@ -374,6 +372,7 @@ public static class LightNodeBakePass
         program.Use();
 
         bvh.Bind();
+        bvh.BindSurfaces();
         texelHomePatch.BindBase(GpuBindings.TexelHomePatch);
         patchValues.BindBase(GpuBindings.PatchFinalValues);
         childPositions.BindBase(GpuBindings.ChildPositions);

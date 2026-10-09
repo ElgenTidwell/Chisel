@@ -1,8 +1,16 @@
-layout(std430, binding = 24) readonly buffer TriUv0Buffer { vec2 triUv0[]; };
-layout(std430, binding = 25) readonly buffer TriUv1Buffer { vec2 triUv1[]; };
-layout(std430, binding = 26) readonly buffer TriUv2Buffer { vec2 triUv2[]; };
+struct BvhTriangleSurface
+{
+    vec2 uv0;
+    vec2 uv1;
+    vec2 uv2;
+    uint albedo;
+    uint padding;
+};
+
+layout(std430, binding = 2) readonly buffer BvhSurfacesBuffer { BvhTriangleSurface surfaces[]; };
 
 vec2 GetTriHitUV(uint triIdx, float u, float v)
 {
-    return (1.0 - u - v) * triUv0[triIdx] + u * triUv1[triIdx] + v * triUv2[triIdx];
+    BvhTriangleSurface s = surfaces[triIdx];
+    return (1.0 - u - v) * s.uv0 + u * s.uv1 + v * s.uv2;
 }

@@ -246,7 +246,6 @@ public partial class TextureSettingsWindow : Window
         IsTerrainMode = HasTerrainSelection;
 
         tCreate.IsEnabled = !HasTerrainSelection && HasFaceSelection;
-        tDelete.IsEnabled = HasTerrainSelection;
         tPMat.IsEnabled = HasTerrainSelection;
         tSMat.IsEnabled = HasTerrainSelection;
     }
@@ -286,15 +285,6 @@ public partial class TextureSettingsWindow : Window
     private void tCreate_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
     {
         CreateTerrains();
-    }
-    private void tDelete_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
-    {
-        var objs = SelectedTerrains.ToList();
-        var snaps = objs.Select(o => o.SnapshotForUndo()).ToList();
-        foreach (var obj in objs) obj.Delete();
-        Toolbelt.SelectedObjects.Clear();
-        MapTools.FinalizeDeletedObjects();
-        Toolbelt.UndoManager.DoOnUndo(() => { foreach (var s in snaps) s.Restore(); });
     }
     private async void tPMat_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
     {

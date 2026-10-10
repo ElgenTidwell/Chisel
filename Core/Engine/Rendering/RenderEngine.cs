@@ -454,6 +454,18 @@ namespace Engine.Rendering
         {
             GraphicsDeviceManager = new GraphicsDeviceManager(Instance);
 
+            ValidDisplayModes = new List<DisplayMode>();
+
+            foreach (var res in GraphicsAdapter.DefaultAdapter.SupportedDisplayModes)
+            {
+                bool active = false;
+                if (res == GraphicsAdapter.DefaultAdapter.CurrentDisplayMode)
+                {
+                    active = true;
+                }
+                ValidDisplayModes.Add(res);
+            }
+
             disableColors.ColorWriteChannels = ColorWriteChannels.Alpha;
 
             WireframeRasterizerState = new RasterizerState();
@@ -591,18 +603,6 @@ namespace Engine.Rendering
         /// </summary>
         public static void InitRenderEngine()
         {
-            ValidDisplayModes = new List<DisplayMode>();
-
-            foreach (var res in GraphicsAdapter.DefaultAdapter.SupportedDisplayModes)
-            {
-                bool active = false;
-                if (res == GraphicsAdapter.DefaultAdapter.CurrentDisplayMode)
-                {
-                    active = true;
-                }
-                ValidDisplayModes.Add(res);
-            }
-
             WhiteTexture  = new Texture2D(Instance.GraphicsDevice, 1, 1);
             DimTexture    = new Texture2D(Instance.GraphicsDevice, 1, 1);
             BlackTexture  = new Texture2D(Instance.GraphicsDevice, 1, 1);

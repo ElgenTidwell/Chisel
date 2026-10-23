@@ -172,7 +172,7 @@ public static class ModelImporter
 
         MainWindow.Instance.modelEditor.Clear();
 
-        ModelEditorData.ImportFBXFile(fbx.Path.AbsolutePath);
+        ModelEditorData.ImportFBXFile(fbx.Path.LocalPath);
 
         MainWindow.Instance.modelEditor.RefreshAll();
     }
@@ -183,7 +183,7 @@ public static class ModelImporter
 
         MainWindow.Instance.modelEditor.Clear();
 
-        ModelEditorData.ReimportFBXModel(fbx.Path.AbsolutePath);
+        ModelEditorData.ReimportFBXModel(fbx.Path.LocalPath);
 
         MainWindow.Instance.modelEditor.RefreshAll();
     }
@@ -194,7 +194,7 @@ public static class ModelImporter
 
         MainWindow.Instance.modelEditor.Clear();
 
-        var fbxNames = ModelEditorData.PeekFBXAnimationNames(fbx.Path.AbsolutePath);
+        var fbxNames = ModelEditorData.PeekFBXAnimationNames(fbx.Path.LocalPath);
         if (fbxNames.Count == 0)
         {
             await ShowSimpleError("Issues Reimporting", "There were no animations found on the FBX.");
@@ -209,7 +209,7 @@ public static class ModelImporter
         var ret = await picker.ShowDialog<bool>(MainWindow.Instance);
         if (!ret || picker.SelectedAnimations.Count == 0) return;
 
-        ModelEditorData.ReimportFBXAnimations(fbx.Path.AbsolutePath, picker.SelectedAnimations);
+        ModelEditorData.ReimportFBXAnimations(fbx.Path.LocalPath, picker.SelectedAnimations);
 
         var dangling = ModelEditorData.FindDanglingSequenceReferences();
         if (dangling.Count > 0)

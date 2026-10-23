@@ -5,6 +5,7 @@ using MsBox.Avalonia;
 using Newtonsoft.Json;
 using Rockwall;
 using Rockwall2.Editor.Common.Input;
+using Rockwall2.Editor.Common.Utils;
 using Rockwall2.Editor.Mapper;
 using Rockwall2.Editor.Mapper.Utils;
 using Rockwall2.Views;
@@ -512,6 +513,9 @@ public static class MapTools
     }
     public static void BuildMap(bool run)
     {
+        // Nobody likes stale cheese
+        FileHandler.SaveCurrentMap();
+
         KeyboardManager.ClearKeys();
 
         if (string.IsNullOrEmpty(ActivePath) || !File.Exists(ActivePath))

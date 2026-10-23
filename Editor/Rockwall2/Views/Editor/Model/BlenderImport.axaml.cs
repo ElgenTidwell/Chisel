@@ -73,7 +73,7 @@ public partial class BlenderImport : Window
 
         if (files == null || files.Count <= 0) return;
 
-        SelectedBlendPath = files[0].Path.AbsolutePath;
+        SelectedBlendPath = files[0].Path.LocalPath;
         blendPathBox.Text = SelectedBlendPath;
         btnOK.IsEnabled = true;
     }
